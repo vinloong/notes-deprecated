@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "0750cabfcd5c1347",
+        "id": "9bcef98f98da1601",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "devops/windows-commands.md",
-            "mode": "source"
+            "file": "k8s&container/containerd-k8s.md",
+            "mode": "preview"
           }
         }
       }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "devops/windows-commands.md",
+                "file": "k8s&container/containerd-k8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "devops/windows-commands.md"
+                "file": "k8s&container/containerd-k8s.md"
               }
             }
           }
@@ -115,17 +115,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0750cabfcd5c1347",
+  "active": "9bcef98f98da1601",
   "lastOpenFiles": [
+    "k8s&container/containerd-k8s.md",
+    "devops/git-command.md",
+    "devops/git-start.md",
+    "devops/用docker构建你的开发环境.md",
+    "others/pandoc.md",
+    "devops/windows-commands.md",
     "devops/未命名.md",
     "devops/Jenkins.md",
     "linux/未命名.md",
-    "linux/ssh.md",
-    "linux/login_no_passwd.md",
-    "journal/2021-06-09_15-06-30.md",
-    "202106091552.md",
-    "linux/cpuinfo.md",
-    "others/template.md",
-    "templates/head.md"
+    "linux/ssh.md"
   ]
 }
