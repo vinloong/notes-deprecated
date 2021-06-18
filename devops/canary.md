@@ -133,7 +133,7 @@ service/production created
 
 ```
  ### 2. 创建 `Production` 版本的应用路由 (Ingress)
- 
+
 ```yaml
 kind: Ingress
 apiVersion: extensions/v1beta1
@@ -157,7 +157,7 @@ spec:
 
 ### 3. 访问`Production` 接口
 
-![](http://resources.lingwenlong.com/note-img/20210604155718.png)
+ ![](http://resources.lingwenlong.com/note-img/20210604155718.png)
 
 ### 4. 下面部署 `Canary` 版本
 yaml 文件 参考上面的版本，在 `gated-demo` 加上 `-canary`
@@ -218,5 +218,4 @@ spec:
 
 # 总结
 上面是简单的灰度测试，实际商用还是考虑灰度策略问题如何与用户结合起来控制，可以指定哪些用户参与灰度测试。
-
 

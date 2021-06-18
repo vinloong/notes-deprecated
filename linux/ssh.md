@@ -30,8 +30,19 @@ ssh -p 22 test@test-n1
 
 ## 密钥登录
 
-![](http://resources.lingwenlong.com/note-img/20210609165527.png)
+ ![](http://resources.lingwenlong.com/note-img/20210609165527.png)
 > 信息提示大意是密钥文件的权限太过开放了
 > 修改下权限只能自己访问就可以了
 
 
+# FAQ
+1. no hostkeys available— exiting
+   root权限下，重新生成密钥：
+	```shell
+	ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
+    ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+	
+	chmod 600 /etc/ssh/ssh_host_dsa_key
+	chmod 600 /etc/ssh/ssh_host_rsa_key
+	```
+2.   

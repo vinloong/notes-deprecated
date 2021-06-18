@@ -30,7 +30,6 @@ dns-nameserver 114.114.114.114
 
 > 原来设置 `/etc/network/interfaces` 的方法还可以用，只是设置的dns没有用
 > 新的配置使用 netplan 管理
-> 
 
 #### 修改配置文件
 

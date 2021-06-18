@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9bcef98f98da1601",
+        "id": "af95eeba12b224bc",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "k8s&container/containerd-k8s.md",
-            "mode": "preview"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s&container/containerd-k8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "k8s&container/containerd-k8s.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -115,17 +109,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9bcef98f98da1601",
+  "active": "af95eeba12b224bc",
   "lastOpenFiles": [
-    "k8s&container/containerd-k8s.md",
-    "devops/git-command.md",
-    "devops/git-start.md",
-    "devops/用docker构建你的开发环境.md",
-    "others/pandoc.md",
-    "devops/windows-commands.md",
-    "devops/未命名.md",
-    "devops/Jenkins.md",
-    "linux/未命名.md",
-    "linux/ssh.md"
+    "k8s&container/containered.md",
+    "containered.pdf",
+    "``.md",
+    "templates/head-01.md",
+    "k8s&container/k8s_faq.md",
+    "linux/ssh.md",
+    "k8s&container/dockershim-faq.md",
+    "k8s&container/未命名.md",
+    "k8s&container/docker_file.md",
+    "devops/WSL2 安装和使用.md"
   ]
 }
