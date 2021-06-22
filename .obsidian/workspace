@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SUMMARY.md",
+            "file": "k8s&container/k8s-install.md",
             "mode": "preview"
           }
         }
@@ -60,7 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340
+    "width": 360
   },
   "right": {
     "id": "41d3fde056411c40",
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SUMMARY.md",
+                "file": "k8s&container/k8s-install.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SUMMARY.md"
+                "file": "k8s&container/k8s-install.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "fbfcb3ab5db17f07",
   "lastOpenFiles": [
-    "SUMMARY.md",
-    "k8s&container/k8s-job-start.md",
-    "k8s&container/k8s-ingress.md",
+    "k8s&container/未命名.md",
     "k8s&container/containered.md",
-    "k8s&container/k8s-docker-2-containerd.md",
-    "k8s&container/k8s-del-or-add-node.md",
-    "k8s&container/dockershim-faq.md",
-    "k8s&container/containerd-k8s.md",
+    "k8s&container/k8s_install.md",
+    "k8s&container/cri-o 入门.md",
+    "linux/未命名.md",
+    "linux/command-firewall.md",
+    "linux/ssh.md",
     "linux/static_ip.md",
-    "k8s&container/未命名.md"
+    "linux/rzsz.md",
+    "linux/reset_passwd.md"
   ]
 }

@@ -1,5 +1,17 @@
 # Linux
+## 文件权限管理
+
+## 进程管理
+
+
+## 文件系统操作命令
 - [常用命令之 alias](linux/command-alias.md)
+- 
+## 用户管理
+
+## 
+
+
 - [常用命令之 apt-get](linux/command-apt-get.md)
 - [常用命令之 cat](linux/command-cat.md)
 - [常用命令之 chmod](linux/command-chmod.md)
