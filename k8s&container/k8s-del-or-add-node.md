@@ -38,6 +38,8 @@ node/test-n3 evicted
 > kubectl delete node test-n3
 node "test-n3" deleted
 
+# 恢复调度节点
+> kubectl uncordon test-n3
 ```
 ##  重置节点
 

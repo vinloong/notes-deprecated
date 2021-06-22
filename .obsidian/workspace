@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "af95eeba12b224bc",
+        "id": "fbfcb3ab5db17f07",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "SUMMARY.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "SUMMARY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "SUMMARY.md"
+              }
             }
           }
         ]
@@ -109,17 +115,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "af95eeba12b224bc",
+  "active": "fbfcb3ab5db17f07",
   "lastOpenFiles": [
+    "SUMMARY.md",
+    "k8s&container/k8s-job-start.md",
+    "k8s&container/k8s-ingress.md",
     "k8s&container/containered.md",
-    "containered.pdf",
-    "``.md",
-    "templates/head-01.md",
-    "k8s&container/k8s_faq.md",
-    "linux/ssh.md",
+    "k8s&container/k8s-docker-2-containerd.md",
+    "k8s&container/k8s-del-or-add-node.md",
     "k8s&container/dockershim-faq.md",
-    "k8s&container/未命名.md",
-    "k8s&container/docker_file.md",
-    "devops/WSL2 安装和使用.md"
+    "k8s&container/containerd-k8s.md",
+    "linux/static_ip.md",
+    "k8s&container/未命名.md"
   ]
 }
