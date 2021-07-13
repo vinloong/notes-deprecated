@@ -117,6 +117,8 @@
   },
   "active": "fbfcb3ab5db17f07",
   "lastOpenFiles": [
+    "linux/Raspberry Pi OS Lite.md",
+    "k8s&container/containered.md",
     "linux/未命名.md",
     "k8s&container/microk8s.md",
     "k8s&container/k8s-kubectl-label.md",
@@ -124,8 +126,6 @@
     "linux/command-tar.md",
     "linux/command-alias.md",
     "k8s&container/k8s-install.md",
-    "k8s&container/k8s-ingress.md",
-    "k8s&container/未命名.md",
-    "k8s&container/containered.md"
+    "k8s&container/k8s-ingress.md"
   ]
 }
