@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "k8s&container/k8s-install.md",
+            "file": "linux/Raspberry Pi OS Lite.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s&container/k8s-install.md",
+                "file": "linux/Raspberry Pi OS Lite.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k8s&container/k8s-install.md"
+                "file": "linux/Raspberry Pi OS Lite.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "fbfcb3ab5db17f07",
   "lastOpenFiles": [
-    "k8s&container/未命名.md",
-    "k8s&container/containered.md",
-    "k8s&container/k8s_install.md",
-    "k8s&container/cri-o 入门.md",
     "linux/未命名.md",
-    "linux/command-firewall.md",
-    "linux/ssh.md",
-    "linux/static_ip.md",
-    "linux/rzsz.md",
-    "linux/reset_passwd.md"
+    "k8s&container/microk8s.md",
+    "k8s&container/k8s-kubectl-label.md",
+    "k8s&container/k8s-job-start.md",
+    "linux/command-tar.md",
+    "linux/command-alias.md",
+    "k8s&container/k8s-install.md",
+    "k8s&container/k8s-ingress.md",
+    "k8s&container/未命名.md",
+    "k8s&container/containered.md"
   ]
 }

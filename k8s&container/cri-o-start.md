@@ -1,3 +1,46 @@
+---
+title: cri-o 安装
+author: Uncle Dragon
+date: 2021-06-28
+categories: 
+tags: []
+---
+
+<div align='center' ><b><font size='70'> cri-o 安装 </font></b></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center> author: Uncle Dragon </center>
+
+
+<center>   date: 2021-06-28 </center>
+
+
+<div STYLE="page-break-after: always;"></div>
+
+[TOC]
+
+<div STYLE="page-break-after: always;"></div>
 
 
 # 安装
@@ -67,4 +110,52 @@ cgroup_manager = "cgroupfs"
 
 
 
+
+# 安装工具
+
+- 使用 wget
+
+```shell
+VERSION="v1.21.0"
+wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz
+sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
+rm -f crictl-$VERSION-linux-amd64.tar.gz
+```
+
+- 使用 curl
+
+```
+VERSION="v1.21.0"
+curl -L https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-${VERSION}-linux-amd64.tar.gz --output crictl-${VERSION}-linux-amd64.tar.gz
+sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
+rm -f crictl-$VERSION-linux-amd64.tar.gz
+```
+
+`crictl`默认连接到 `unix:///var/run/dockershim.sock`
+
+```shell
+$ sudo cat <<EOF | sudo tee /etc/crictl.yaml
+> runtime-endpoint: unix:///run/containerd/containerd.sock
+> image-endpoint: unix:///run/containerd/containerd.sock
+> timeout: 10
+> debug: false
+> EOF
+
+```
+
+
+
+这个是为了 k8s 使用containerd 而做的，后面配合k8s 再做具体的说明
+
+下面是docker 和 containerd 的cli 工具使用常用命令对比
+
+| id   | docker | ctr  | crictl | 备注 |
+| ---- | ------ | ---- | ------ | ------ |
+| 1    | docker images | ctr images ls | crictl images | 查看本地镜像 |
+| 2   | docker pull | ctr images pull | crictl pull | 拉取镜像 |
+| 3  | docker run | ctr container run | - | 运行容器 |
+| 4 | docker ps | ctr task ls | crictl ps | 查看运行的人容器 |
+| 5 | docker rm | ctr container del | crictl rm | 移除容器 |
+| 6 | docker exec | ctr task exec | crictl exec | 进入容器 |
+| 7 | docker logs |  | crictl logs | 查看容器日志 |
 

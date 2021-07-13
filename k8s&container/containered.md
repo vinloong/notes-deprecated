@@ -210,7 +210,7 @@ Server:
 
 ## 使用
 
-- `ctr` 是 `containerd` 本身的车重
+- `ctr` 是 `containerd` 自带的工具
 
 - `crictl` 是 k8s 社区定义的专门的 CLI 工具
 
