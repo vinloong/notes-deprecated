@@ -1,0 +1,18 @@
+{
+  "showFrontmatter": true,
+  "readableLineLength": false,
+  "foldIndent": true,
+  "defaultViewMode": "preview",
+  "showLineNumber": true,
+  "showUnsupportedFiles": true,
+  "newLinkFormat": "relative",
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "attachmentFolderPath": "./img",
+  "alwaysUpdateLinks": true,
+  "foldHeading": true
+}
