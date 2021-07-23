@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "linux/Raspberry Pi OS Lite.md",
+            "file": "linux/reset_passwd.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/Raspberry Pi OS Lite.md",
+                "file": "linux/reset_passwd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/Raspberry Pi OS Lite.md"
+                "file": "linux/reset_passwd.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "fbfcb3ab5db17f07",
   "lastOpenFiles": [
-    "linux/Raspberry Pi OS Lite.md",
-    "k8s&container/containered.md",
-    "k8s&container/cri-o-start.md",
-    "linux/command-firewall.md",
-    "linux/command-chmod.md",
-    "linux/command-apt-get.md",
-    "linux/command-alias.md",
+    "linux/reset_passwd.md",
     "linux/change-passwd.md",
-    "linux/add_sudo_permission_4_new_user.md",
-    "linux/vim_command_button_map.md"
+    "devops/git-commit-no-passwd.md",
+    "devops/git-command.md",
+    "devops/fs-gitlab.md",
+    "devops/es-faq.md",
+    "devops/canary.md",
+    "linux/vim_command_button_map.md",
+    "linux/vim_command.md",
+    "linux/ubuntu-upgrade.md"
   ]
 }
