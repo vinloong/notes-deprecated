@@ -100,10 +100,10 @@ $ sudo apt-get install containerd.io
 ```shell
 
 # 下载链接
-$ wget https://github.com/containerd/containerd/releases/download/v1.5.2/containerd-1.5.2-linux-amd64.tar.gz
+$ wget https://github.com/containerd/containerd/releases/download/v1.5.4/cri-containerd-cni-1.5.4-linux-amd64.tar.gz
 
 # 解压二进制包并生成默认文件
-$ tar xvf containerd-1.5.2-linux-amd64.tar.gz -C /usr/local/
+$ tar xvf containerd-1.5.2-linux-amd64.tar.gz -C /
 
 # 创建目录
 $ mkdir /etc/containerd

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "linux/reset_passwd.md",
+            "file": "k8s&container/kube-edge.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/reset_passwd.md",
+                "file": "k8s&container/kube-edge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/reset_passwd.md"
+                "file": "k8s&container/kube-edge.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "fbfcb3ab5db17f07",
   "lastOpenFiles": [
+    "k8s&container/kube-edge.md",
+    "k8s&container/k8s-install.md",
+    "k8s&container/k8s-docker-2-containerd.md",
+    "k8s&container/docker-containerd-K8S.md",
+    "k8s&container/containered.md",
+    "k8s&container/docker-install.md",
+    "k8s&container/microk8s.md",
     "linux/reset_passwd.md",
     "linux/change-passwd.md",
-    "devops/git-commit-no-passwd.md",
-    "devops/git-command.md",
-    "devops/fs-gitlab.md",
-    "devops/es-faq.md",
-    "devops/canary.md",
-    "linux/vim_command_button_map.md",
-    "linux/vim_command.md",
-    "linux/ubuntu-upgrade.md"
+    "devops/git-commit-no-passwd.md"
   ]
 }
