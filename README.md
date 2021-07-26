@@ -6,19 +6,24 @@
 ---
 ### :zap: Languages I use
 
-<img align="left" src="icons/python.svg" alt="Python" height="40px" />
-...
-...
+ ![](https://img.shields.io/badge/python-lightgrey?logo=PYTHON)
+
+ ![](https://img.shields.io/badge/scala-lightgrey?logo=scala)
+
+ ![](https://img.shields.io/badge/java-lightgrey?logo=java)
+
+ ![](https://img.shields.io/badge/Csharp-lightgrey?logo=Csharp)
 
 ---
 
 ### :rocket: Some of the technologies I have worked with
 
-![NGINX](https://img.shields.io/badge/-NGINX-000000?style=flat&logo=NGINX)
-![Redis](https://img.shields.io/badge/-Redis-000000?style=flat&logo=Redis)
-![Docker](https://img.shields.io/badge/-Docker-000000?style=flat&logo=Docker)
-![Git](https://img.shields.io/badge/-Git-000000?style=flat&logo=git)
-![Jenkins](https://img.shields.io/badge/-Jenkins-000000?style=flat&logo=Jenkins)
+![NGINX](https://img.shields.io/badge/nginx-lightgrey?logo=nginx)
+![Redis](https://img.shields.io/badge/redis-lightgrey?logo=redis)
+![Docker](https://img.shields.io/badge/docker-lightgrey?logo=docker)
+![Kubernetes](https://img.shields.io/badge/kubernetes-lightgrey?logo=kubernetes)
+![Git](https://img.shields.io/badge/git-lightgrey?logo=git)
+![Jenkins](https://img.shields.io/badge/jenkins-lightgrey?logo=jenkins)
 
 ---
 
