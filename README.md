@@ -6,24 +6,36 @@
 ---
 ### :zap: Languages I use
 
- ![](https://img.shields.io/badge/python-lightgrey?logo=PYTHON)
+![](https://img.shields.io/badge/Python-lightgrey?logo=PYTHON)
+![](https://img.shields.io/badge/Scala-lightgrey?logo=scala)
+![](https://img.shields.io/badge/Java-lightgrey?logo=java)
+![](https://img.shields.io/badge/CSharp-lightgrey?logo=Csharp)
+![](https://img.shields.io/badge/Go-lightgrey?logo=go)
 
- ![](https://img.shields.io/badge/scala-lightgrey?logo=scala)
 
- ![](https://img.shields.io/badge/java-lightgrey?logo=java)
-
- ![](https://img.shields.io/badge/Csharp-lightgrey?logo=Csharp)
 
 ---
 
 ### :rocket: Some of the technologies I have worked with
 
-![NGINX](https://img.shields.io/badge/nginx-lightgrey?logo=nginx)
-![Redis](https://img.shields.io/badge/redis-lightgrey?logo=redis)
-![Docker](https://img.shields.io/badge/docker-lightgrey?logo=docker)
-![Kubernetes](https://img.shields.io/badge/kubernetes-lightgrey?logo=kubernetes)
-![Git](https://img.shields.io/badge/git-lightgrey?logo=git)
-![Jenkins](https://img.shields.io/badge/jenkins-lightgrey?logo=jenkins)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-lightgrey?logo=kubernetes)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-lightgrey?logo=elasticsearch)
+![Prometheus](https://img.shields.io/badge/Prometheus-lightgrey?logo=prometheus)
+![Ceph](https://img.shields.io/badge/Ceph-lightgrey?logo=ceph)
+![Docker](https://img.shields.io/badge/Docker-lightgrey?logo=docker)
+![Linux](https://img.shields.io/badge/Linux-lightgrey?logo=linux)
+![Postgres](https://img.shields.io/badge/Postgresql-lightgrey?logo=postgresql)
+![NGINX](https://img.shields.io/badge/Nginx-lightgrey?logo=nginx)
+![Redis](https://img.shields.io/badge/Redis-lightgrey?logo=redis)
+![Git](https://img.shields.io/badge/Git-lightgrey?logo=git)
+![Jenkins](https://img.shields.io/badge/Jenkins-lightgrey?logo=jenkins)
+![Zookeeper](https://img.shields.io/badge/Zookeeper-lightgrey?logo=zookeeper)
+![Kafka](https://img.shields.io/badge/Kafka-lightgrey?logo=kafka)
+![HDFS](https://img.shields.io/badge/Hdfs-lightgrey?logo=hdfs)
+![Mqtt](https://img.shields.io/badge/Mqtt-lightgrey?logo=mqtt)
+
+
+
 
 ---
 
