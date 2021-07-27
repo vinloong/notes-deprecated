@@ -1,6 +1,6 @@
  Raspberry Pi OS Lite  基于 Debian 10
  
- 
+ # set up  Raspberry
  设置静态IP
  
 ```shell
@@ -92,10 +92,7 @@ Mon 12 Jul 17:36:07 CST 2021
 ```
 
 
-
-
-
-#### Set up the repository
+# install containerd
 
 ```shell
 $ sudo apt-get update
@@ -125,3 +122,26 @@ $ echo \
 $ sudo apt-get update
 $ sudo apt-get install containerd.io
 ```
+
+# install mqtt
+
+```shell
+
+
+wget http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key
+
+sudo apt-key add mosquitto-repo.gpg.key
+
+# sudo wget -P /etc/apt/sources.list.d/ http://repo.mosquitto.org/debian/mosquitto-jessie.list
+# sudo wget -P /etc/apt/sources.list.d/ http://repo.mosquitto.org/debian/mosquitto-stretch.list
+sudo wget -P /etc/apt/sources.list.d/ http://repo.mosquitto.org/debian/mosquitto-buster.list 
+
+apt-get update
+
+apt-get install mosquitto
+
+
+```
+
+
+
