@@ -1,10 +1,10 @@
-# README
+> 面朝大海，春暖花开
 
+> 闲看庭前花开花落，漫随天外云卷云舒
 
-
-## :man_technologist: Hey! i'm [loong](https://blog.lingwenlong.com).
+# :man_technologist: Hey! i'm [loong](https://blog.lingwenlong.com).
 ---
-### :zap: Languages I use
+## :zap: Languages I use
 
 ![](https://img.shields.io/badge/Python-lightgrey?logo=PYTHON)
 ![](https://img.shields.io/badge/Scala-lightgrey?logo=scala)
@@ -16,7 +16,7 @@
 
 ---
 
-### :rocket: Some of the technologies I have worked with
+## :rocket: Some of the technologies I have worked with
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-lightgrey?logo=kubernetes)
 ![Elasticsearch](https://img.shields.io/badge/Elasticsearch-lightgrey?logo=elasticsearch)
@@ -44,8 +44,3 @@
 下面是平时工作中用到的一些知识点整理
 
 # [目录](SUMMARY.md)
-
-  > 面朝大海，春暖花开
-  > 
-  > 闲看庭前花开花落，漫随天外云卷云舒
-
