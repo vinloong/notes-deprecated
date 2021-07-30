@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "k8s&container/play_docker_in_windows.md",
+            "file": "devops/nfs.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s&container/play_docker_in_windows.md",
+                "file": "devops/nfs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k8s&container/play_docker_in_windows.md"
+                "file": "devops/nfs.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "a8e19d3e18e981a2",
   "lastOpenFiles": [
-    "k8s&container/play_docker_in_windows.md",
-    "linux/enable_root.md",
-    "linux/file-system.md",
-    "linux/ubuntu-tips.md",
-    "linux/static_ip.md",
-    "linux/ssh.md",
-    "linux/rzsz.md",
-    "k8s&container/edge.md",
-    "k8s&container/未命名.md",
-    "k8s&container/kube-edge.md"
+    "devops/nfs.md",
+    "k8s&container/docker-faq.md",
+    "k8s&container/docker-commond.md",
+    "k8s&container/docker_install.md",
+    "k8s&container/docker_in_windows.md",
+    "k8s&container/docker_file.md",
+    "k8s&container/docker-commit.md",
+    "k8s&container/docker-Dockerfile.md",
+    "linux/reset_passwd.md",
+    "linux/rzsz.md"
   ]
 }
