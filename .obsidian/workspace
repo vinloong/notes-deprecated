@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "devops/nfs.md",
+            "file": "k8s&container/k8s-overview.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "devops/nfs.md",
+                "file": "k8s&container/k8s-overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "devops/nfs.md"
+                "file": "k8s&container/k8s-overview.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "a8e19d3e18e981a2",
   "lastOpenFiles": [
+    "k8s&container/k8s-overview.md",
+    "k8s&container/k8s-about.md",
+    "devops/jenkins-in-k8s.md",
+    "devops/Jenkins-faq.md",
     "devops/nfs.md",
     "k8s&container/docker-faq.md",
     "k8s&container/docker-commond.md",
     "k8s&container/docker_install.md",
     "k8s&container/docker_in_windows.md",
-    "k8s&container/docker_file.md",
-    "k8s&container/docker-commit.md",
-    "k8s&container/docker-Dockerfile.md",
-    "linux/reset_passwd.md",
-    "linux/rzsz.md"
+    "k8s&container/docker_file.md"
   ]
 }
