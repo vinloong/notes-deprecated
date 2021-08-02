@@ -5,9 +5,13 @@
 
 
 
+
+
+
+
 # edge core
 
- 
+
 ```shell
 
 # 下载 kubeedge
@@ -174,7 +178,6 @@ $ cat /proc/cgroups
 
 scp k8s-master:/etc/cni/net.d/* /etc/cni/net.d/
 ```
-
 
 
 

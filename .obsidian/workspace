@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "k8s&container/edge.md",
+            "file": "k8s&container/k8s-overview.md",
             "mode": "preview"
           }
         }
@@ -60,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 360,
-    "collapsed": true
+    "width": 360
   },
   "right": {
     "id": "41d3fde056411c40",
@@ -77,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s&container/edge.md",
+                "file": "k8s&container/k8s-overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k8s&container/edge.md"
+                "file": "k8s&container/k8s-overview.md"
               }
             }
           }
@@ -118,15 +117,15 @@
   },
   "active": "a8e19d3e18e981a2",
   "lastOpenFiles": [
-    "k8s&container/edge.md",
-    "k8s&container/未命名.md",
-    "k8s&container/kube-edge.md",
-    "k8s&container/k8s-install.md",
-    "k8s&container/k8s-docker-2-containerd.md",
-    "k8s&container/docker-containerd-K8S.md",
-    "k8s&container/containered.md",
-    "k8s&container/docker-install.md",
-    "k8s&container/microk8s.md",
-    "linux/reset_passwd.md"
+    "k8s&container/k8s-overview.md",
+    "k8s&container/k8s-about.md",
+    "devops/jenkins-in-k8s.md",
+    "devops/Jenkins-faq.md",
+    "devops/nfs.md",
+    "k8s&container/docker-faq.md",
+    "k8s&container/docker-commond.md",
+    "k8s&container/docker_install.md",
+    "k8s&container/docker_in_windows.md",
+    "k8s&container/docker_file.md"
   ]
 }
