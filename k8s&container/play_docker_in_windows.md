@@ -107,3 +107,4 @@ wsl -d Ubuntu-20.04 -u root /etc/init.sh
 
 
 > 想设置开机自启：WIN + R 输入 `shell:startup` , 把脚本放进去，就可以了
+

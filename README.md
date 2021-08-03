@@ -30,9 +30,9 @@
 ![Git](https://img.shields.io/badge/Git-lightgrey?logo=git)
 ![Jenkins](https://img.shields.io/badge/Jenkins-lightgrey?logo=jenkins)
 ![Zookeeper](https://img.shields.io/badge/Zookeeper-lightgrey?logo=zookeeper)
-![Kafka](https://img.shields.io/badge/Kafka-lightgrey?logo=kafka)
+![Kafka](https://img.shields.io/badge/Apache%20Kafka-lightgrey?logo=apache%20kafka)
 ![HDFS](https://img.shields.io/badge/Hdfs-lightgrey?logo=hdfs)
-![Mqtt](https://img.shields.io/badge/Mqtt-lightgrey?logo=mqtt)
+![Mqtt](https://img.shields.io/badge/Mqtt-lightgrey?logo=eclipse%20mosquitto)
 
 
 
