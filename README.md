@@ -33,6 +33,10 @@
 ![Kafka](https://img.shields.io/badge/Apache%20Kafka-lightgrey?logo=apache%20kafka)
 ![HDFS](https://img.shields.io/badge/Hdfs-lightgrey?logo=hdfs)
 ![Mqtt](https://img.shields.io/badge/Mqtt-lightgrey?logo=eclipse%20mosquitto)
+![Ingress](https://img.shields.io/badge/Ingress-lightgrey?logo=Ingress)
+![Harbor](https://img.shields.io/badge/Harbor-lightgrey?logo=Harbor)
+
+
 
 
 
