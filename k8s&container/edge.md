@@ -1,3 +1,49 @@
+---
+title: 几个具备云边协同的边缘框架
+author: Uncle Dragon
+date: 2021-07-03
+categories: 
+tags: []
+---
+
+<div align='center' ><b><font size='70'> 几个具备云边协同的边缘框架 </font></b></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center> author: Uncle Dragon </center>
+
+
+<center>   date: 2021-07-03 </center>
+
+
+<div STYLE="page-break-after: always;"></div>
+
+[TOC]
+
+<div STYLE="page-break-after: always;"></div>
+
+
+# 几个具备云边协同的边缘框架
 
 |                | KubeEdge | Baetyl | SuperEdge | OpenYurt |     |
 | -------------- | -------- | ------ | -------- | --------- | ---- |
@@ -8,32 +54,26 @@
 
 
 
-# kube edge 
+## kube edge 
 
- ![](http://resources.lingwenlong.com/note-img/20210726144555.png)
-
-
-
-# Baetyl
-
- ![](http://resources.lingwenlong.com/note-img/20210726142908.png)
+ <img src="http://resources.lingwenlong.com/note-img/20210726144555.png" style="zoom:80%;" />
 
 
 
-# SuperEdge
+## Baetyl
 
- ![](http://resources.lingwenlong.com/note-img/20210726160731.png)
-
-
+ <img src="http://resources.lingwenlong.com/note-img/20210726142908.png" style="zoom:80%;" />
 
 
 
+## SuperEdge
+
+ <img src="http://resources.lingwenlong.com/note-img/20210726160731.png" style="zoom:80%;" />
 
 
 
-
-# Openyurt
-
+## Openyurt
 
 
- ![](http://resources.lingwenlong.com/note-img/20210726160804.png)
+
+ <img src="http://resources.lingwenlong.com/note-img/20210726160804.png" style="zoom: 67%;" />

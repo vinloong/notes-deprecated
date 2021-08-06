@@ -212,3 +212,37 @@ spec:
 
  
 
+# 配置 动态 slave
+
+## 安装插件
+
+选择 kubernetes 插件，安装
+
+等待。。。
+
+## 配置
+
+系统管理 -> 系统配置 -> Cloud -> 添加一个云
+
+![image-20210804153606423](http://resources.lingwenlong.com/note-img/20210804153606.png)
+
+
+
+
+
+![image-20210804153249523](http://resources.lingwenlong.com/note-img/20210804153249.png)
+
+
+
+![image-20210804153325353](http://resources.lingwenlong.com/note-img/20210804153325.png)
+
+
+
+挂载 docker 
+
+![image-20210804153407679](http://resources.lingwenlong.com/note-img/20210804153407.png)
+
+
+
+
+
