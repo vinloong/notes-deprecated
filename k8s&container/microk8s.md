@@ -261,3 +261,75 @@ done
 ./import.sh
 ```
 
+
+# 获得k8s 依赖镜像
+
+```shell
+$ git clone https://github.com/ubuntu/microk8s.git
+Cloning into 'microk8s'...
+remote: Enumerating objects: 8514, done.
+remote: Counting objects: 100% (847/847), done.
+remote: Compressing objects: 100% (473/473), done.
+remote: Total 8514 (delta 502), reused 662 (delta 364), pack-reused 7667
+Receiving objects: 100% (8514/8514), 12.02 MiB | 7.93 MiB/s, done.
+Resolving deltas: 100% (5628/5628), done.
+
+$ grep -ir 'image:' * | awk '{print $3 $4}' | uniq
+nvidia/k8s-device-plugin:1.11
+metallb/speaker:v0.9.3
+metallb/controller:v0.9.3
+cdkbot/hostpath-provisioner-$ARCH:1.0.0
+coredns/coredns:1.8.0
+image:k8s.gcr.io/ingress-nginx/controller:$TAG
+image:traefik:2.3
+cdkbot/registry-$ARCH:2.6
+quay.io/prometheus/alertmanager
+quay.io/coreos/prometheus-operator:v0.34.0
+
+image:grafana/grafana:6.4.3
+quay.io/coreos/kube-rbac-proxy:v0.4.1
+quay.io/coreos/kube-state-metrics:v1.8.0
+quay.io/prometheus/node-exporter:v0.18.1
+quay.io/coreos/kube-rbac-proxy:v0.4.1
+quay.io/coreos/k8s-prometheus-adapter-amd64:v0.5.0
+quay.io/prometheus/prometheus
+image:nginx")
+nfvpe/multus:v3.4.2
+kubernetesui/dashboard:v2.2.0
+kubernetesui/metrics-scraper:v1.0.6
+docker.elastic.co/kibana/kibana-oss:7.10.2
+image:quay.io/fluentd_elasticsearch/elasticsearch:v7.10.2
+image:alpine:3.6
+time="2016-02-04T07:53:57.505612354Z"level=error
+quay.io/fluentd_elasticsearch/fluentd:v3.1.0
+
+jaegertracing/jaeger-operator:1.24.0
+k8s.gcr.io/metrics-server/metrics-server:v0.5.0
+gcr.io/google_containers/k8s-dns-kube-dns-$ARCH:1.14.7
+gcr.io/google_containers/k8s-dns-dnsmasq-nanny-$ARCH:1.14.7
+gcr.io/google_containers/k8s-dns-sidecar-$ARCH:1.14.7
+buoyantio/emojivoto-emoji-svc:v8
+buoyantio/emojivoto-voting-svc:v8
+buoyantio/emojivoto-web:v8
+"k8s.gcr.io/cuda-vector-add:v0.1"
+image:cdkbot/microbot-$ARCH
+busybox
+nginx
+localhost:32000/my-busybox
+busybox
+busybox:1.28.4
+image:gcr.io/knative-samples/helloworld-go
+nginx:latest
+image:
+{{image
+"k8s.gcr.io/cuda-vector-add:v0.1"
+image:cdkbot/microbot-{{
+docker.io/calico/cni:v3.19.1
+docker.io/calico/pod2daemon-flexvol:v3.19.1
+docker.io/calico/node:v3.19.1
+docker.io/calico/kube-controllers:v3.17.3
+cdkbot/calico-cni-s390x:v3.15.1
+cdkbot/calico-pod2daemon-flexvol-s390x:v3.15.1
+cdkbot/calico-node-s390x:v3.15.1
+cdkbot/calico-kube-controllers-s390x:v3.15.1
+```

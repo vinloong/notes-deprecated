@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "k8s&container/k8s-1.22.md",
+            "file": "k8s&container/k8s-kubeconfig.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s&container/k8s-1.22.md",
+                "file": "k8s&container/k8s-kubeconfig.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k8s&container/k8s-1.22.md"
+                "file": "k8s&container/k8s-kubeconfig.md"
               }
             }
           }
@@ -118,14 +118,14 @@
   "active": "1aa6158607f61765",
   "lastOpenFiles": [
     "k8s&container/未命名.md",
-    "devops/jenkins-in-k8s.md",
-    "k8s&container/edge.md",
-    "linux/Raspberry Pi OS Lite.md",
-    "linux/linux-profile-bashrc-diff.md",
-    "k8s&container/build-image-in-aliyun.md",
+    "k8s&container/microk8s.md",
+    "k8s&container/k8s-install.md",
+    "k8s&container/containered.md",
+    "k8s&container/cri-o-start.md",
+    "k8s&container/prometheus-kafka.md",
+    "k8s&container/play_docker_in_windows.md",
+    "k8s&container/kube-edge.md",
     "k8s&container/k8s-overview.md",
-    "k8s&container/k8s-about.md",
-    "devops/Jenkins-faq.md",
-    "devops/nfs.md"
+    "k8s&container/k8s-kubectl-label.md"
   ]
 }
