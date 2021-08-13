@@ -1,5 +1,5 @@
-
 # 设置密码
+
 被邀请的用户会收到一封邮件
 
 ![](http://imgchr.lingwenlong.com/notes/img/20210531090513.png)
@@ -12,5 +12,4 @@ Forgot your password?` 来重置密码
 
 # 入门
 [[git-start]]
-
 
