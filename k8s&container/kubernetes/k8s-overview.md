@@ -1,7 +1,7 @@
 ---
 title: k8s 概述
 author: Uncle Dragon
-date: 2021-08-02
+date: 2021-07-26
 categories: k8s&container
 tags: [k8s]
 ---
@@ -33,7 +33,7 @@ tags: [k8s]
 <center> author: Uncle Dragon </center>
 
 
-<center>   date: 2021-08-02 </center>
+<center>   date: 2021-07-26 </center>
 
 
 <div STYLE="page-break-after: always;"></div>

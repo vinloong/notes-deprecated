@@ -1,8 +1,52 @@
- Raspberry Pi OS Lite  基于 Debian 10
- 
+---
+title: 初识 Raspberry Pi OS Lite
+author: Uncle Dragon
+date: 2021-07-13
+categories: linux
+tags:  [linux,containerd,mqtt]
+---
+
+<div align='center' ><b><font size='70'> 初识 Raspberry Pi OS Lite </font></b></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center> author: Uncle Dragon </center>
+
+
+<center>   date: 2021-07-13 </center>
+
+
+<div STYLE="page-break-after: always;"></div>
+
+[TOC]
+
+<div STYLE="page-break-after: always;"></div>
+
+ Raspberry Pi OS Lite  基于 Debian 10 32 位版本的精简版，因此debian 下默认使用的命令，绝大部分它都可以使用。
+
  # set up  Raspberry
  设置静态IP
- 
+
 ```shell
 $ vi /etc/dhcpcd.conf
  
@@ -12,8 +56,8 @@ static routes=10.8.30.1
 static domain_name_servers=114.114.114.114 223.5.5.5 223.6.6.6
  
 ```
- 
- 
+
+
 ssh 
  默认已经安装ssh服务
  设置开机自启
@@ -25,7 +69,7 @@ Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.ser
 Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/systemd/system/ssh.service.
  
 ```
- 
+
 安装 vim
 
 ```shell

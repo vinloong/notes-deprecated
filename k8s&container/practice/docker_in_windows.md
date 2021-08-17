@@ -13,7 +13,7 @@ tags: [docker,wsl]
 > 设置 > 更新和安全 > OS 内部版本信息
 
 
-![](http://imgchr.lingwenlong.com/notes/img/20200909141750.png)
+ ![](http://imgchr.lingwenlong.com/notes/img/20200909141750.png)
 
 <!--more-->
 

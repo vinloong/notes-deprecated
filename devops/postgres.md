@@ -1,4 +1,5 @@
 # 安装
+
 ```shell
 # Create the file repository configuration:
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb\_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -74,7 +75,6 @@ psql -V [or -version]
 > `\conninfo`：列出当前数据库和连接的信息。
 > `\password`: 设置密码
 > `\x`: 已列的形式展示 （当不想列展示时，再次`\x`即可)
-> 
 
 
 ```shell

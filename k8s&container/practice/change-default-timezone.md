@@ -2,7 +2,7 @@
 
 ## 1. Alpine
 
-```
+```dockerfile
 ENV TZ Asia/Shanghai
 
 RUN apk add tzdata && cp /usr/share/zoneinfo/${TZ} /etc/localtime \
@@ -12,7 +12,7 @@ RUN apk add tzdata && cp /usr/share/zoneinfo/${TZ} /etc/localtime \
 
 ## 2. Debian
 Debian 基础镜像 中已经安装了 tzdata 包，我们可以将以下代码添加到 Dockerfile 中：
-```
+```dockerfile
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive
 
@@ -26,7 +26,7 @@ RUN ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime \
 Ubuntu 基础镜像中没有安装了 tzdata 包，因此我们需要先安装 tzdata 包。
 我们可以将以下代码添加到 Dockerfile 中。
 
-```
+```dockerfile
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive
 
@@ -40,9 +40,10 @@ RUN apt update \
 
 ## 4. CentOS
 CentOS 基础镜像 中已经安装了 tzdata 包，我们可以将以下代码添加到 Dockerfile 中。
-```
+```dockerfile
 ENV TZ Asia/Shanghai
 
 RUN ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime \
     && echo ${TZ} > /etc/timezone
 ```
+
