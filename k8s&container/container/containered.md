@@ -192,6 +192,7 @@ $ sudo systemctl restart containerd
 ```
 
 ## 测试
+
 ```shell
 $ ctr version
 Client:

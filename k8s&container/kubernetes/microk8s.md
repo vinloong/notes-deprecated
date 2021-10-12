@@ -274,7 +274,7 @@ remote: Total 8514 (delta 502), reused 662 (delta 364), pack-reused 7667
 Receiving objects: 100% (8514/8514), 12.02 MiB | 7.93 MiB/s, done.
 Resolving deltas: 100% (5628/5628), done.
 
-$ grep -ir 'image:' * | awk '{print $3 $4}' | uniq
+$ grep -ir 'image: ' * | awk '{print $3 $4}' | uniq
 nvidia/k8s-device-plugin:1.11
 metallb/speaker:v0.9.3
 metallb/controller:v0.9.3

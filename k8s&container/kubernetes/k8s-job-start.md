@@ -97,3 +97,4 @@ $ kubectl logs -n anxinyun job-prediction-water-level-1621240200-cvb89
 
  
 
+
