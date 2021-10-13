@@ -1,4 +1,5 @@
 {
+  "obsidianCss": false,
   "showFrontmatter": true,
   "readableLineLength": false,
   "foldIndent": true,
@@ -14,5 +15,6 @@
   },
   "attachmentFolderPath": "./img",
   "alwaysUpdateLinks": true,
-  "foldHeading": true
+  "foldHeading": true,
+  "newFileLocation": "current"
 }
