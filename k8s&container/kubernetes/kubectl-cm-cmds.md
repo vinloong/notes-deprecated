@@ -9,7 +9,6 @@ tags: [ kubectl ]
 
 常用的 kubectl 命令和标志
 
-
 ## Kubectl 自动补全
 
 ### BASH
@@ -41,7 +40,7 @@ echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc
 ##  Kubectl 上下文和配置
 
 设置 `kubectl` 与哪个 Kubernetes 集群进行通信并修改配置信息。
-查看[使用 kubeconfig 跨集群授权访问](/zh/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
+查看[使用 kubeconfig 跨集群授权访问]()
 文档获取配置文件详细信息。
 
 
@@ -321,19 +320,19 @@ kubectl get pods  -n mynamespace --no-headers=true | awk '/pattern1|pattern2/{pr
 ## 与运行中的 Pods 进行交互
 
 ```bash
-kubectl logs my-pod                                 # 获取 pod 日志（标准输出）
-kubectl logs -l name=myLabel                        # 获取含 name=myLabel 标签的 Pods 的日志（标准输出）
-kubectl logs my-pod --previous                      # 获取上个容器实例的 pod 日志（标准输出）
-kubectl logs my-pod -c my-container                 # 获取 Pod 容器的日志（标准输出, 多容器场景）
-kubectl logs -l name=myLabel -c my-container        # 获取含 name=myLabel 标签的 Pod 容器日志（标准输出, 多容器场景）
-kubectl logs my-pod -c my-container --previous      # 获取 Pod 中某容器的上个实例的日志（标准输出, 多容器场景）
-kubectl logs -f my-pod                              # 流式输出 Pod 的日志（标准输出）
-kubectl logs -f my-pod -c my-container              # 流式输出 Pod 容器的日志（标准输出, 多容器场景）
-kubectl logs -f -l name=myLabel --all-containers    # 流式输出含 name=myLabel 标签的 Pod 的所有日志（标准输出）
-kubectl run -i --tty busybox --image=busybox -- sh  # 以交互式 Shell 运行 Pod
-kubectl run nginx --image=nginx -n mynamespace      # 在指定名字空间中运行 nginx Pod
-kubectl run nginx --image=nginx                     # 运行 ngins Pod 并将其规约写入到名为 pod.yaml 的文件
-  --dry-run=client -o yaml > pod.yaml
+kubectl logs my-pod                                                  # 获取 pod 日志（标准输出）
+kubectl logs -l name=myLabel                                         # 获取含 name=myLabel 标签的 Pods 的日志（标准输出）
+kubectl logs my-pod --previous                                       # 获取上个容器实例的 pod 日志（标准输出）
+kubectl logs my-pod -c my-container                                  # 获取 Pod 容器的日志（标准输出, 多容器场景）
+kubectl logs -l name=myLabel -c my-container                         # 获取含 name=myLabel 标签的 Pod 容器日志（标准输出, 多容器场景）
+kubectl logs my-pod -c my-container --previous                       # 获取 Pod 中某容器的上个实例的日志（标准输出, 多容器场景）
+kubectl logs -f my-pod                                               # 流式输出 Pod 的日志（标准输出）
+kubectl logs -f my-pod -c my-container                               # 流式输出 Pod 容器的日志（标准输出, 多容器场景）
+kubectl logs -f -l name=myLabel --all-containers                     # 流式输出含 name=myLabel 标签的 Pod 的所有日志（标准输出）
+kubectl run -i --tty busybox --image=busybox -- sh                   # 以交互式 Shell 运行 Pod
+kubectl run nginx --image=nginx -n mynamespace                       # 在指定名字空间中运行 nginx Pod
+kubectl run nginx --image=nginx --dry-run=client -o yaml > pod.yaml  # 运行 ngins Pod 并将其规约写入到名为 pod.yaml 的文件
+  
 
 kubectl attach my-pod -i                            # 挂接到一个运行的容器中
 kubectl port-forward my-pod 5000:6000               # 在本地计算机上侦听端口 5000 并转发到 my-pod 上的端口 6000
@@ -359,7 +358,6 @@ kubectl port-forward deploy/my-deployment 5000:6000       # 侦听本地端口 5
 kubectl exec deploy/my-deployment -- ls                   # 在 Deployment 里的第一个 Pod 的第一个容器里运行命令（单容器和多容器例子）
 ```
 
-
 ## 与节点和集群进行交互
 
 
@@ -375,6 +373,8 @@ kubectl cluster-info dump --output-directory=/path/to/cluster-state   # 将当�
 # 如果已存在具有指定键和效果的污点，则替换其值为指定值。
 kubectl taint nodes foo dedicated=special-user:NoSchedule
 ```
+
+
 
 ### 资源类型
 
@@ -397,6 +397,7 @@ kubectl api-resources -o wide                # 用扩展格式列举所有资源
 kubectl api-resources --verbs=list,get       # 支持 "list" 和 "get" 请求动词的所有资源
 kubectl api-resources --api-group=extensions # "extensions" API 组中的所有资源
 ```
+
 
 
 ### 格式化输出
@@ -433,6 +434,8 @@ kubectl get pods -A -o=custom-columns='DATA:metadata.*'
 ```
 
 有关更多示例，请参看 kubectl [参考文档](/zh/docs/reference/kubectl/overview/#custom-columns)。
+
+
 
 
 ### Kubectl 日志输出详细程度和调试
