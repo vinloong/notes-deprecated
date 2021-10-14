@@ -22,6 +22,7 @@
 ![Elasticsearch](https://img.shields.io/badge/Elasticsearch-lightgrey?logo=elasticsearch)
 ![Prometheus](https://img.shields.io/badge/Prometheus-lightgrey?logo=prometheus)
 ![Ceph](https://img.shields.io/badge/Ceph-lightgrey?logo=ceph)
+![Containerd](https://img.shields.io/badge/Containerd-lightgrey?logo=Containerd)
 ![Docker](https://img.shields.io/badge/Docker-lightgrey?logo=docker)
 ![Linux](https://img.shields.io/badge/Linux-lightgrey?logo=linux)
 ![Postgres](https://img.shields.io/badge/Postgresql-lightgrey?logo=postgresql)

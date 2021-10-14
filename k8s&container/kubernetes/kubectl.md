@@ -8,6 +8,8 @@ tags: [ kubectl ]
 
 
 
+[TOC]
+
 你可以使用 Kubectl 命令行工具管理 Kubernetes 集群。
 `kubectl` 在 `$HOME/.kube` 目录中查找一个名为 `config` 的配置文件。
 你可以通过设置 KUBECONFIG 环境变量或设置
@@ -565,9 +567,3 @@ kubectl whoami
 Current user: plugins-user
 ```
 
-要了解关于插件的更多信息，请查看[示例 cli 插件](https://github.com/kubernetes/sample-cli-plugin)。
-
-
-* 开始使用 [kubectl]() 命令。
-
-* 查看更多[示例 cli 插件](https://github.com/kubernetes/sample-cli-plugin)。
