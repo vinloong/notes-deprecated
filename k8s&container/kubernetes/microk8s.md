@@ -293,14 +293,13 @@ quay.io/prometheus/node-exporter:v0.18.1
 quay.io/coreos/kube-rbac-proxy:v0.4.1
 quay.io/coreos/k8s-prometheus-adapter-amd64:v0.5.0
 quay.io/prometheus/prometheus
-image:nginx")
+image:nginx
 nfvpe/multus:v3.4.2
 kubernetesui/dashboard:v2.2.0
 kubernetesui/metrics-scraper:v1.0.6
 docker.elastic.co/kibana/kibana-oss:7.10.2
 image:quay.io/fluentd_elasticsearch/elasticsearch:v7.10.2
 image:alpine:3.6
-time="2016-02-04T07:53:57.505612354Z"level=error
 quay.io/fluentd_elasticsearch/fluentd:v3.1.0
 
 jaegertracing/jaeger-operator:1.24.0
@@ -311,7 +310,7 @@ gcr.io/google_containers/k8s-dns-sidecar-$ARCH:1.14.7
 buoyantio/emojivoto-emoji-svc:v8
 buoyantio/emojivoto-voting-svc:v8
 buoyantio/emojivoto-web:v8
-"k8s.gcr.io/cuda-vector-add:v0.1"
+k8s.gcr.io/cuda-vector-add:v0.1
 image:cdkbot/microbot-$ARCH
 busybox
 nginx
@@ -320,9 +319,7 @@ busybox
 busybox:1.28.4
 image:gcr.io/knative-samples/helloworld-go
 nginx:latest
-image:
-{{image
-"k8s.gcr.io/cuda-vector-add:v0.1"
+k8s.gcr.io/cuda-vector-add:v0.1
 image:cdkbot/microbot-{{
 docker.io/calico/cni:v3.19.1
 docker.io/calico/pod2daemon-flexvol:v3.19.1
@@ -333,3 +330,150 @@ cdkbot/calico-pod2daemon-flexvol-s390x:v3.15.1
 cdkbot/calico-node-s390x:v3.15.1
 cdkbot/calico-kube-controllers-s390x:v3.15.1
 ```
+
+分析：
+
+```
+# 下面几个镜像是无法直接 pull 的
+gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.7
+gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.7
+gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.7
+k8s.gcr.io/metrics-server/metrics-server:v0.5.0
+k8s.gcr.io/ingress-nginx/controller:v1.0.4
+k8s.gcr.io/pause:3.1
+
+# 下面是可以直接 pull 的
+docker.io/kubernetesui/dashboard:v2.2.0
+docker.io/kubernetesui/metrics-scraper:v1.0.6
+docker.io/cdkbot/calico-cni-s390x:v3.15.1
+docker.io/cdkbot/calico-pod2daemon-flexvol-s390x:v3.15.1
+docker.io/cdkbot/calico-node-s390x:v3.15.1
+docker.io/cdkbot/calico-kube-controllers-s390x:v3.15.1
+docker.io/cdkbot/hostpath-provisioner-amd64:1.0.0
+docker.io/cdkbot/registry-amd64:2.6
+docker.io/coredns/coredns:1.8.0
+docker.io/calico/cni:v3.19.1
+docker.io/calico/pod2daemon-flexvol:v3.19.1
+docker.io/calico/node:v3.19.1
+docker.io/calico/kube-controllers:v3.17.3
+docker.io/grafana/grafana:6.4.3
+docker.elastic.co/kibana/kibana-oss:7.10.2
+quay.io/fluentd_elasticsearch/elasticsearch:v7.10.2
+quay.io/fluentd_elasticsearch/fluentd:v3.1.0
+quay.io/prometheus/alertmanager:latest
+quay.io/prometheus/prometheus:latest
+quay.io/prometheus/node-exporter:v0.18.1
+quay.io/coreos/kube-rbac-proxy:v0.4.1
+quay.io/coreos/prometheus-operator:v0.34.0
+quay.io/coreos/kube-rbac-proxy:v0.4.1
+quay.io/coreos/kube-state-metrics:v1.8.0
+quay.io/coreos/k8s-prometheus-adapter-amd64:v0.5.0
+
+#
+# 下面镜像不是必须的
+#
+
+# 一个微服务框架 example
+buoyantio/emojivoto-emoji-svc:v8
+buoyantio/emojivoto-voting-svc:v8
+buoyantio/emojivoto-web:v8
+
+# 微服务治理
+jaegertracing/jaeger-operator:1.24.0
+traefik:2.3
+
+# AI 智能小车
+cdkbot/microbot-amd64
+
+# CPU与GPU并用的“协同处理”
+k8s.gcr.io/cuda-vector-add:v0.1
+
+# 机器学习
+nvidia/k8s-device-plugin:1.11
+metallb/speaker:v0.9.3
+metallb/controller:v0.9.3
+```
+
+
+
+`pull-gcr.sh`
+
+pull  谷歌镜像
+
+```shell
+#!/bin/bash
+images=(
+k8s.gcr.io/metrics-server/metrics-server:v0.5.0=registry.cn-hangzhou.aliyuncs.com/gcr_k8s_containers/microk8s_metrics-server:v0.5.0
+gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.7=registry.cn-hangzhou.aliyuncs.com/gcr_k8s_containers/microk8s_dns-sidecar:1.14.7
+gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.7=registry.cn-hangzhou.aliyuncs.com/gcr_k8s_containers/microk8s_kube-dns:1.14.7
+gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.7=registry.cn-hangzhou.aliyuncs.com/gcr_k8s_containers/microk8s_dnsmasq-nanny:1.14.7
+k8s.gcr.io/ingress-nginx/controller:v1.0.4=registry.cn-hangzhou.aliyuncs.com/gcr_k8s_containers/ingress-nginx-controller:v1.0.4
+k8s.gcr.io/pause:3.1=registry.cn-hangzhou.aliyuncs.com/gcr_k8s_containers/pause:3.1
+)
+
+OIFS=$IFS
+
+for image in ${images[@]};do
+    IFS='='
+    set $image
+    microk8s.ctr --namespace k8s.io image pull $2
+    microk8s.ctr --namespace k8s.io image tag $2 $1
+    IFS=$OIFS
+done
+```
+
+
+
+`pull.sh`
+
+```shell
+#!/bin/bash
+
+images=(
+docker.io/kubernetesui/dashboard:v2.2.0
+docker.io/kubernetesui/metrics-scraper:v1.0.6
+docker.io/cdkbot/calico-cni-s390x:v3.15.1
+docker.io/cdkbot/calico-pod2daemon-flexvol-s390x:v3.15.1
+docker.io/cdkbot/calico-node-s390x:v3.15.1
+docker.io/cdkbot/calico-kube-controllers-s390x:v3.15.1
+docker.io/cdkbot/hostpath-provisioner-amd64:1.0.0
+docker.io/cdkbot/registry-amd64:2.6
+docker.io/coredns/coredns:1.8.0
+docker.io/grafana/grafana:6.4.3
+docker.io/calico/cni:v3.19.1
+docker.io/calico/pod2daemon-flexvol:v3.19.1
+docker.io/calico/node:v3.19.1
+docker.io/calico/kube-controllers:v3.17.3
+docker.elastic.co/kibana/kibana-oss:7.10.2
+quay.io/fluentd_elasticsearch/elasticsearch:v7.10.2
+quay.io/fluentd_elasticsearch/fluentd:v3.1.0
+quay.io/prometheus/alertmanager:latest
+quay.io/prometheus/prometheus:latest
+quay.io/prometheus/node-exporter:v0.18.1
+quay.io/coreos/kube-rbac-proxy:v0.4.1
+quay.io/coreos/prometheus-operator:v0.34.0
+quay.io/coreos/kube-rbac-proxy:v0.4.1
+quay.io/coreos/kube-state-metrics:v1.8.0
+quay.io/coreos/k8s-prometheus-adapter-amd64:v0.5.0
+)
+
+OIFS=$IFS
+
+for image in ${images[@]};do
+    echo "======================== pull ${image} ================================"
+    microk8s.ctr --namespace k8s.io image pull $image
+    echo "======================== ${image} ====================================="
+done
+
+```
+
+
+
+
+
+
+
+# 配置
+
+microk8s containerd 的配置在 `/var/snap/microk8s/current/args/`
+
