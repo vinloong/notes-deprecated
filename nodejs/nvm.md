@@ -45,3 +45,7 @@ node_mirror: https://npm.taobao.org/mirrors/node/
 npm_mirror: https://npm.taobao.org/mirrors/npm/
 ```
 
+```shell
+ npm config set registry https://registry.npmjs.org
+```
+
