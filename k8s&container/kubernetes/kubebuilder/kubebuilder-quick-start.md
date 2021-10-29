@@ -1,5 +1,7 @@
 
 
+[TOC]
+
 
 
 # 安装
@@ -421,29 +423,113 @@ GVK = Group Version Kind GVR = Group Version Resources
 
 我们之前看到的 `Scheme` 是一种追踪 Go Type 的方法，它对应于给定的GVK.
 
-例如，假如我们将 `"tutorial.kubebuilder.io/api/v1".CronJob{}` 类型放置在 `batch.tutorial.kubebuilder.io/v1` API 组中（也就是说它有 `CronJob` Kind)。
+例如，假如我们将 `"tutorial.kubebuilder.io/api/v1".Guestbook{}` 类型放置在 `batch.tutorial.kubebuilder.io/v1` API 组中（也就是说它有 `Guestbook` Kind)。
 
-然后，我们便可以在 API server 给定的 json 数据构造一个新的 `&CronJob{}`。
+然后，我们便可以在 API server 给定的 json 数据构造一个新的 `&Guestbook{}`。
 
 ```go
 {
-    "kind": "CronJob",
+    "kind": "Guestbook",
     "apiVersion": "batch.tutorial.kubebuilder.io/v1",
     ...
 }
 ```
 
-或当我们在一次变更中去更新或提交 `&CronJob{}` 时，查找正确的组版本
+或当我们在一次变更中去更新或提交 `&Guestbook{}` 时，查找正确的组版本
 
 
 
 # 创建一个API
 
-运行下面的命令，创建一个新的API ()
+
+
+搭建一个新的 kind ,和相应的控制器，创建一个新的API  ,我们可以使用kubebuilder create api :
 
 ```shell
 kubebuilder create api --group webapp --version v1 --kind Guestbook
+kubebuilder create api --group batch --version v1 --kind CronJob
 ```
+
+当我们第一次为每个组-版本使用这个命令的时候，它会自动创建一个新的组-版本目录。
+
+本案例中创建了一个对应 `dragon.com/v1`的目录 `api/v1`
+
+它也为我们的 `Guestbook` Kind 添加了一个文件, `api/v1/guestbook_types.go`。每次我们用不同的 kind 去调用这个命令，它将添加一个相应的新文件。
+
+我们来看下有哪些东西：
+
+```shell
+vi guestbook_types.go
+```
+
+导入 meta/v1 API 组,通常本身并不会暴露该组，而是包含所有 k8s 种类共有的元数据。
+
+```go
+import (
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+)
+```
+
+下面，我们为种类的 `Spec`  和 `Status` 定义类型。 k8s 功能通过使期待的状态 (Spec) 和实际集群状态(其他对象的 `Status` )保持一致和外部状态，然后记录观察到的状态(Status)。 因此，每个 `functional` 对象包括 `spec` 和 `status` 。 很少的类型，像 `ConfiMap` 不需要遵从这个模式，因此它们不编码期待的状态，但是大部分类型需要做这一步。
+
+ 
+
+```go
+// 编辑这个文件！这个是你拥有的脚手架
+// 注意的是：json 标签是必需的.为了能够序列化字段，任何你添加的新字段一定要有 json 标签。
+
+// GuestbookSpec defines the desired state of Guestbook
+type GuestbookSpec struct {
+	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
+	// Important: Run "make" to regenerate code after modifying this file
+
+	// Foo is an example field of Guestbook. Edit guestbook_types.go to remove/update
+	Foo string `json:"foo,omitempty"`
+	metav1.TypeMeta `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+
+	Spec v1beta1.CronJobSpec	`json:"spec,omitempty"`
+	Status v1beta1.CronJobStatus	`json:"status,omitempty"`
+}
+
+// GuestbookStatus defines the observed state of Guestbook
+type GuestbookStatus struct {
+	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
+	// Important: Run "make" to regenerate code after modifying this file
+}
+```
+
+
+
+下一步，我们定义与实际种类相对应的类型，`Guestbook` 和 `GuestbookList` 。`Guestbook` 是一个根类型，它描述了 `Guestbook`种类。像所有 k8s 对象，它包含 `TypeMeta` (描述了 API 版本和种类),也包含其中拥有像名称，名称空间和标签的东西的 `ObjectMeta`。
+
+
+
+`GuestbookList` 只是多个 `Guestbook` 的容器，它是批量操作中使用的种类，像 List 。
+
+
+
+通常情况下，我们从不修改任何一个 -- 所有修改都要到 `Spec` 或者 `Status`。
+
+
+
+那个小小的 `+kubebuilder:object:root` 注释被称为标记。我们将会看到更多的它们，但要知道它们充当额外的元数据，告诉 `controller-root` (我们的代码和YAML生成器)额外的信息。这个特定的标签告诉 `object` 生成器这个类型表示一个种类。然后，`object`生成器为我们生成这个所有表示种类的类型一定要实现的 `runtime.Object` 接口的实现。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
