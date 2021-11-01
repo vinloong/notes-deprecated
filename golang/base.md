@@ -223,5 +223,4 @@ exit status 2
 #### 5. Go中对nil的Slice和空Slice的处理是一致的吗
 
 
-  
 

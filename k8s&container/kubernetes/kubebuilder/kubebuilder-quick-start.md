@@ -29,9 +29,12 @@ windows
 
 ```cmd
 # windows 下没有对应的安装包，需要自己把代码下下来，自己编译
+# 由于windows 版本没有脚本在创建api的时候会报错，所以建议还是使用linux 版本
 git clone git@github.com:kubernetes-sigs/kubebuilder
 cd kubebuilder
 go build -o kubebuilder.exe ./cmd/
+
+
 ```
 
 
