@@ -16,5 +16,6 @@
   "attachmentFolderPath": "./img",
   "alwaysUpdateLinks": true,
   "foldHeading": true,
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "strictLineBreaks": true
 }

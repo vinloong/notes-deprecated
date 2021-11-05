@@ -444,13 +444,10 @@ GVK = Group Version Kind GVR = Group Version Resources
 
 # 创建一个API
 
-
-
 搭建一个新的 kind ,和相应的控制器，创建一个新的API  ,我们可以使用kubebuilder create api :
 
 ```shell
-kubebuilder create api --group webapp --version v1 --kind Guestbook
-kubebuilder create api --group batch --version v1 --kind CronJob
+ kubebuilder create api --group webapp --version v1 --kind Guestbook
 ```
 
 当我们第一次为每个组-版本使用这个命令的时候，它会自动创建一个新的组-版本目录。
@@ -499,45 +496,19 @@ type GuestbookSpec struct {
 type GuestbookStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+
 }
 ```
 
-
-
 下一步，我们定义与实际种类相对应的类型，`Guestbook` 和 `GuestbookList` 。`Guestbook` 是一个根类型，它描述了 `Guestbook`种类。像所有 k8s 对象，它包含 `TypeMeta` (描述了 API 版本和种类),也包含其中拥有像名称，名称空间和标签的东西的 `ObjectMeta`。
-
-
-
 `GuestbookList` 只是多个 `Guestbook` 的容器，它是批量操作中使用的种类，像 List 。
 
-
-
 通常情况下，我们从不修改任何一个 -- 所有修改都要到 `Spec` 或者 `Status`。
-
-
 
 那个小小的 `+kubebuilder:object:root` 注释被称为标记。我们将会看到更多的它们，但要知道它们充当额外的元数据，告诉 `controller-root` (我们的代码和YAML生成器)额外的信息。这个特定的标签告诉 `object` 生成器这个类型表示一个种类。然后，`object`生成器为我们生成这个所有表示种类的类型一定要实现的 `runtime.Object` 接口的实现。
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 测试
-
 
 
 将 CRD 安装到集群中
@@ -568,21 +539,11 @@ kubectl apply -f config/samples/
 
 构建并推送你的镜像到 你指定的镜像仓库
 
-```
+```bash
 make docker-build docker-push IMG=<your-registry>/<project-name>:tag
 ```
 
 根据 IMG 指定的镜像将控制器部署到集群中
 
-```
+```bash
 make deploy IMG=<your-registry>/<project-name>:tag
-```
-
-
-
-
-
-
-
-
-

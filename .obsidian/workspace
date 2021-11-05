@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "k8s&container/kubernetes/kubebuilder-quick-start.md",
+            "file": "linux/static_ip.md",
             "mode": "preview"
           }
         }
@@ -60,7 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 360
+    "width": 252
   },
   "right": {
     "id": "41d3fde056411c40",
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s&container/kubernetes/kubebuilder-quick-start.md",
+                "file": "linux/static_ip.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k8s&container/kubernetes/kubebuilder-quick-start.md"
+                "file": "linux/static_ip.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "1aa6158607f61765",
   "lastOpenFiles": [
+    "linux/static_ip.md",
+    "k8s&container/kubernetes/kubebuilder/kubebuilder-quick-start.md",
+    "k8s&container/kubernetes/k8s_etcd.md",
     "k8s&container/kubernetes/kubebuilder.md",
     "k8s&container/kubernetes/kubectl-cm-cmds.md",
     "k8s&container/kubernetes/kubectl.md",
     "templates/head-01.md",
     "k8s&container/未命名.md",
     "k8s&container/microk8s.md",
-    "k8s&container/k8s-install.md",
-    "k8s&container/containered.md",
-    "k8s&container/cri-o-start.md",
-    "k8s&container/prometheus-kafka.md"
+    "k8s&container/k8s-install.md"
   ]
 }

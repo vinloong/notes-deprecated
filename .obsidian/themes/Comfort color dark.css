@@ -24,8 +24,8 @@
   --blockquote-border: rgba(77, 60, 166, .6);
   --text-accent: #ff9640ba;
   --interactive-accent-rgb: #fe8019;
-  --font-family-editor: Avenir;
-  --font-family-preview: Avenir;
+  --font-family-editor: Fira Code, Avenir;
+  --font-family-preview: Fira Code, Avenir;
 }
 
 #graph-view-canvas .links
