@@ -416,9 +416,11 @@ OIFS=$IFS
 for image in ${images[@]};do
     IFS='='
     set $image
+    echo -e "\033[32m >>>>>>>> pull $1 ... >>>>>>>> \033[0m"
     microk8s.ctr --namespace k8s.io image pull $2
     microk8s.ctr --namespace k8s.io image tag $2 $1
     IFS=$OIFS
+    echo -e "\033[32m ========= pull $1 done. ======== \033[0m"
 done
 ```
 
@@ -460,9 +462,9 @@ quay.io/coreos/k8s-prometheus-adapter-amd64:v0.5.0
 OIFS=$IFS
 
 for image in ${images[@]};do
-    echo "======================== pull ${image} ================================"
+    echo -e "\033[32m >>>>>>>>>>>>>> pull ${image} >>>>>>>>>>>>>>> \033[0m"
     microk8s.ctr --namespace k8s.io image pull $image
-    echo "======================== ${image} ====================================="
+    echo -e "\033[32m ============== pull ${image} done. ============== \033[0m"
 done
 
 ```

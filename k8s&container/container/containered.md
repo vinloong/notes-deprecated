@@ -168,7 +168,7 @@ $ containerd config default | sudo tee /etc/containerd/config.toml
 结合 `runc` 使用 `systemd` cgroup 驱动，在 `/etc/containerd/config.toml` 中设置
 
 ```
-[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]c
   ...
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
     SystemdCgroup = true
@@ -402,7 +402,6 @@ $ sudo cat <<EOF | sudo tee /etc/crictl.yaml
 | 5 | docker rm | ctr container del | crictl rm | 移除容器 |
 | 6 | docker exec | ctr task exec | crictl exec | 进入容器 |
 | 7 | docker logs |  | crictl logs | 查看容器日志 |
-
 
 ### `nerdctl`
 

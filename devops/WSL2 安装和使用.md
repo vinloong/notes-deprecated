@@ -116,7 +116,7 @@ service ssh start && service docker start
 ```cmd
 @echo off
 
-wsl --shutdown
+wsl --shutdown Ubuntu-20.04
 wsl -d Ubuntu-20.04 -u root /etc/init.sh
 ```
 

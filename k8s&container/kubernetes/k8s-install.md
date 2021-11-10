@@ -136,7 +136,7 @@ certificatesDir: /etc/kubernetes/pki
 clusterName: kubernetes
 controllerManager: {}
 dns:
-  type: CoreDNS
+  # type: CoreDNS 字段在 1.22 v1beta3中移除，因为 coredns 是k8s kubeadm 唯一支持的 dns 类型
   # 改为华为云的镜像地址
   imageRepository: swr.cn-east-2.myhuaweicloud.com/coredns
   imageTag: 1.8.0
