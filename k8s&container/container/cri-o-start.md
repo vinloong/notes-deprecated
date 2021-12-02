@@ -76,7 +76,7 @@ sudo sysctl --system
 
 ```shell
 OS=xUbuntu_18.04
-VERSION=1.20:1.20.0
+VERSION=1.20
 
 cat <<EOF | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
 deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/ /
