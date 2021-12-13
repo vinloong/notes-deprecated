@@ -1,0 +1,36 @@
+site_name: dragon's notes
+strict: true
+repo_name: "dragon/notes"
+repo_url: "https://github.com/wayloong/notes"
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+theme:
+  name: material
+  feature:
+    tabs: true
+  logo:
+    icon: "public"
+  palette:
+    primary: "teal"
+    accent: "green"
+  include_sidebar: true
+
+plugins:
+  - search
+
+extra_css: [extra.css]
+
+nav:
+  - k8s&container:
+      - container: 
+      - k8s:
+  - linux:
+  - linux:
+
