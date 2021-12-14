@@ -1,9 +1,8 @@
 ---
+tags: [containerd, k8s]
 title: 切换k8s容器运行时：从docker到containerd
-author: Uncle Dragon
-date: 2021-06-21
-categories: k8s
-tags: [k8s,containerd]
+created: '2021-06-21T07:09:52.739Z'
+modified: '2021-12-14T01:10:15.797Z'
 ---
 
 <div align='center' ><b><font size='70'> 切换k8s容器运行时:从docker到containerd </font></b></div>
@@ -61,7 +60,7 @@ tags: [k8s,containerd]
 
 2.  检查 containerd cli ctr 是否存在
 
-   ```shell
+   ```bash
    ctr version
    Client:
      Version:  1.4.6
