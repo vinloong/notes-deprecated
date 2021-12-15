@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # 卷
 
 大家都知道容器中的数据在磁盘上临时存储的。这样会给一些应用带来一些问题：容器崩溃后 kubelet 会重启一个容器，导致原来容器里的文件丢失。
@@ -160,6 +164,116 @@ spec:
   volumes:
   - name: cache-volume
     emptyDir: {}
+```
+
+
+
+#### hostPath
+
+
+
+**警告：**
+
+HostPath 卷存在许多安全风险，最佳做法是尽可能避免使用 HostPath。 当必须使用 HostPath 卷时，它的范围应仅限于所需的文件或目录，并以只读方式挂载。
+
+如果通过 AdmissionPolicy 限制 HostPath 对特定目录的访问， 则必须要求 `volumeMounts` 使用 `readOnly` 挂载以使策略生效。
+
+
+
+`hostPath` 卷能将主机节点文件系统上的文件或目录挂载到你的 Pod 中。 虽然这不是大多数 Pod 需要的，但是它为一些应用程序提供了强大的逃生舱。
+
+例如，`hostPath` 的一些用法有：
+
+- 运行一个需要访问 Docker 内部机制的容器；可使用 `hostPath` 挂载 `/var/lib/docker` 路径。
+- 在容器中运行 cAdvisor 时，以 `hostPath` 方式挂载 `/sys`。
+- 允许 Pod 指定给定的 `hostPath` 在运行 Pod 之前是否应该存在，是否应该创建以及应该以什么方式存在。
+
+除了必需的 `path` 属性之外，用户可以选择性地为 `hostPath` 卷指定 `type`。
+
+
+
+支持的 `type` 值如下：
+
+
+
+| 取值                | 行为                                                         |
+| :------------------ | :----------------------------------------------------------- |
+|                     | 空字符串（默认）用于向后兼容，这意味着在安装 hostPath 卷之前不会执行任何检查。 |
+| `DirectoryOrCreate` | 如果在给定路径上什么都不存在，那么将根据需要创建空目录，权限设置为 0755，具有与 kubelet 相同的组和属主信息。 |
+| `Directory`         | 在给定路径上必须存在的目录。                                 |
+| `FileOrCreate`      | 如果在给定路径上什么都不存在，那么将在那里根据需要创建空文件，权限设置为 0644，具有与 kubelet 相同的组和所有权。 |
+| `File`              | 在给定路径上必须存在的文件。                                 |
+| `Socket`            | 在给定路径上必须存在的 UNIX 套接字。                         |
+| `CharDevice`        | 在给定路径上必须存在的字符设备。                             |
+| `BlockDevice`       | 在给定路径上必须存在的块设备。                               |
+
+
+
+当使用这种类型的卷时要小心，因为：
+
+- HostPath 卷可能会暴露特权系统凭据（例如 Kubelet）或特权 API（例如容器运行时套接字）， 可用于容器逃逸或攻击集群的其他部分。
+- 具有相同配置（例如基于同一 PodTemplate 创建）的多个 Pod 会由于节点上文件的不同 而在不同节点上有不同的行为。
+- 下层主机上创建的文件或目录只能由 root 用户写入。你需要在 特权容器 中以 root 身份运行进程，或者修改主机上的文件权限以便容器能够写入 `hostPath` 卷
+
+
+
+##### hostPath 配置示例
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pd
+spec:
+  containers:
+  - image: k8s.gcr.io/test-webserver
+    name: test-container
+    volumeMounts:
+    - mountPath: /test-pd
+      name: test-volume
+  volumes:
+  - name: test-volume
+    hostPath:
+      # 宿主上目录位置
+      path: /data
+      # 此字段为可选
+      type: Directory
+```
+
+
+
+**注意：** `FileOrCreate` 模式不会负责创建文件的父目录。 如果欲挂载的文件的父目录不存在，Pod 启动会失败。 为了确保这种模式能够工作，可以尝试把文件和它对应的目录分开挂载，如 [`FileOrCreate` 配置](https://kubernetes.io/zh/docs/concepts/storage/volumes/#hostpath-fileorcreate-example) 所示。
+
+
+
+##### hostPath FileOrCreate 配置示例
+
+
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-webserver
+spec:
+  containers:
+  - name: test-webserver
+    image: k8s.gcr.io/test-webserver:latest
+    volumeMounts:
+    - mountPath: /var/local/aaa
+      name: mydir
+    - mountPath: /var/local/aaa/1.txt
+      name: myfile
+  volumes:
+  - name: mydir
+    hostPath:
+      # 确保文件所在目录成功创建。
+      path: /var/local/aaa
+      type: DirectoryOrCreate
+  - name: myfile
+    hostPath:
+      path: /var/local/aaa/1.txt
+      type: FileOrCreate
 ```
 
 
@@ -372,7 +486,7 @@ spec:
 
 
 
-###  第三方提供
+###  others
 
 
 
@@ -415,114 +529,6 @@ spec:
 **说明：** 在使用前你必须先安装运行自己的 GlusterFS。
 
 
-
-#### hostPath
-
-
-
-**警告：**
-
-HostPath 卷存在许多安全风险，最佳做法是尽可能避免使用 HostPath。 当必须使用 HostPath 卷时，它的范围应仅限于所需的文件或目录，并以只读方式挂载。
-
-如果通过 AdmissionPolicy 限制 HostPath 对特定目录的访问， 则必须要求 `volumeMounts` 使用 `readOnly` 挂载以使策略生效。
-
-
-
-`hostPath` 卷能将主机节点文件系统上的文件或目录挂载到你的 Pod 中。 虽然这不是大多数 Pod 需要的，但是它为一些应用程序提供了强大的逃生舱。
-
-例如，`hostPath` 的一些用法有：
-
-- 运行一个需要访问 Docker 内部机制的容器；可使用 `hostPath` 挂载 `/var/lib/docker` 路径。
-- 在容器中运行 cAdvisor 时，以 `hostPath` 方式挂载 `/sys`。
-- 允许 Pod 指定给定的 `hostPath` 在运行 Pod 之前是否应该存在，是否应该创建以及应该以什么方式存在。
-
-除了必需的 `path` 属性之外，用户可以选择性地为 `hostPath` 卷指定 `type`。
-
-
-
-支持的 `type` 值如下：
-
-
-
-| 取值                | 行为                                                         |
-| :------------------ | :----------------------------------------------------------- |
-|                     | 空字符串（默认）用于向后兼容，这意味着在安装 hostPath 卷之前不会执行任何检查。 |
-| `DirectoryOrCreate` | 如果在给定路径上什么都不存在，那么将根据需要创建空目录，权限设置为 0755，具有与 kubelet 相同的组和属主信息。 |
-| `Directory`         | 在给定路径上必须存在的目录。                                 |
-| `FileOrCreate`      | 如果在给定路径上什么都不存在，那么将在那里根据需要创建空文件，权限设置为 0644，具有与 kubelet 相同的组和所有权。 |
-| `File`              | 在给定路径上必须存在的文件。                                 |
-| `Socket`            | 在给定路径上必须存在的 UNIX 套接字。                         |
-| `CharDevice`        | 在给定路径上必须存在的字符设备。                             |
-| `BlockDevice`       | 在给定路径上必须存在的块设备。                               |
-
-
-
-当使用这种类型的卷时要小心，因为：
-
-- HostPath 卷可能会暴露特权系统凭据（例如 Kubelet）或特权 API（例如容器运行时套接字）， 可用于容器逃逸或攻击集群的其他部分。
-- 具有相同配置（例如基于同一 PodTemplate 创建）的多个 Pod 会由于节点上文件的不同 而在不同节点上有不同的行为。
-- 下层主机上创建的文件或目录只能由 root 用户写入。你需要在 特权容器 中以 root 身份运行进程，或者修改主机上的文件权限以便容器能够写入 `hostPath` 卷
-
-
-
-##### hostPath 配置示例
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: test-pd
-spec:
-  containers:
-  - image: k8s.gcr.io/test-webserver
-    name: test-container
-    volumeMounts:
-    - mountPath: /test-pd
-      name: test-volume
-  volumes:
-  - name: test-volume
-    hostPath:
-      # 宿主上目录位置
-      path: /data
-      # 此字段为可选
-      type: Directory
-```
-
-
-
-**注意：** `FileOrCreate` 模式不会负责创建文件的父目录。 如果欲挂载的文件的父目录不存在，Pod 启动会失败。 为了确保这种模式能够工作，可以尝试把文件和它对应的目录分开挂载，如 [`FileOrCreate` 配置](https://kubernetes.io/zh/docs/concepts/storage/volumes/#hostpath-fileorcreate-example) 所示。
-
-
-
-##### hostPath FileOrCreate 配置示例
-
-
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: test-webserver
-spec:
-  containers:
-  - name: test-webserver
-    image: k8s.gcr.io/test-webserver:latest
-    volumeMounts:
-    - mountPath: /var/local/aaa
-      name: mydir
-    - mountPath: /var/local/aaa/1.txt
-      name: myfile
-  volumes:
-  - name: mydir
-    hostPath:
-      # 确保文件所在目录成功创建。
-      path: /var/local/aaa
-      type: DirectoryOrCreate
-  - name: myfile
-    hostPath:
-      path: /var/local/aaa/1.txt
-      type: FileOrCreate
-```
 
 
 
@@ -570,5 +576,159 @@ RBD 的一个特性是它可以同时被多个用户以只读方式挂载。 这
 
 
 
+## 使用 subPath
 
+
+
+有时，在单个 Pod 中共享卷以供多方使用是很有用的。 `volumeMounts.subPath` 属性可用于指定所引用的卷内的子路径，而不是其根路径。
+
+
+
+下面例子展示了如何配置某包含 LAMP 堆栈（Linux Apache MySQL PHP）的 Pod 使用同一共享卷。 此示例中的 `subPath` 配置不建议在生产环境中使用。 PHP 应用的代码和相关数据映射到卷的 `html` 文件夹，MySQL 数据库存储在卷的 `mysql` 文件夹中：
+
+
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-lamp-site
+spec:
+    containers:
+    - name: mysql
+      image: mysql
+      env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: "rootpasswd"
+      volumeMounts:
+      - mountPath: /var/lib/mysql
+        name: site-data
+        subPath: mysql
+    - name: php
+      image: php:7.0-apache
+      volumeMounts:
+      - mountPath: /var/www/html
+        name: site-data
+        subPath: html
+    volumes:
+    - name: site-data
+      persistentVolumeClaim:
+        claimName: my-lamp-site-data
+```
+
+
+
+下面我们自己项目使用的一个栗子：
+
+
+
+```yaml
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: fs-party
+  namespace: free-sun
+  labels:
+    app: fs-party
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fs-party
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fs-party
+    spec:
+      volumes:
+        - name: resources-volume
+          persistentVolumeClaim:
+            claimName: fs-party-pvc
+      containers:
+        - name: fs-party
+          image: 'repository.anxinyun.cn/fsparty/fsparty:v1.7'
+          ports:
+            - name: port-8080
+              containerPort: 8080
+              protocol: TCP
+            - name: port-443
+              containerPort: 443
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          volumeMounts:
+            - name: resources-volume
+              mountPath: /workspace/pros/data/config.php
+              subPath: party/config.php
+            - name: resources-volume
+              mountPath: /etc/nginx/cert
+              subPath: party/cert
+
+```
+
+
+
+
+
+### 使用带有扩展环境变量的 subPath
+
+
+
+使用 `subPathExpr` 字段可以基于 Downward API 环境变量来构造 `subPath` 目录名。 `subPath` 和 `subPathExpr` 属性是互斥的。
+
+
+
+在这个示例中，Pod 使用 `subPathExpr` 来 hostPath 卷 `/var/log/pods` 中创建目录 `pod1`。 `hostPath` 卷采用来自 `downwardAPI` 的 Pod 名称生成目录名。 宿主目录 `/var/log/pods/pod1` 被挂载到容器的 `/logs` 中。
+
+
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+spec:
+  containers:
+  - name: container1
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: busybox
+    command: [ "sh", "-c", "while [ true ]; do echo 'Hello'; sleep 10; done | tee -a /logs/hello.txt" ]
+    volumeMounts:
+    - name: workdir1
+      mountPath: /logs
+      subPathExpr: $(POD_NAME)
+  restartPolicy: Never
+  volumes:
+  - name: workdir1
+    hostPath:
+      path: /var/log/pods
+```
+
+
+
+# 总结
+
+volume 功能：
+
+- 数据共享
+- 数据持久化
+
+类型：
+
+- configMap 
+- secret
+- emptyDir
+- hostPath
+- local
+- nfs
+- cephfs
+- … …
 
