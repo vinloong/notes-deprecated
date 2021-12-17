@@ -1,0 +1,29 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: localhost-pv
+  labels:
+    type: local
+spec:
+  storageClassName: localhostpath
+  capacity:
+    storage: 15Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/dragon/storage"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: localhostpath-pvc
+  namespace: dragon
+spec:
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: localhostpath
+  
