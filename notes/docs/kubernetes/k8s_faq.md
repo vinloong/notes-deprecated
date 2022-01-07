@@ -250,6 +250,7 @@ github.com/coredns/coredns/plugin/kubernetes/controller.go:322: Failed to list *
 
 
 ### `deployment.yaml`丢失怎么删除pod
+
 ```bash
 # 查看 pods 列表
 kubectl get deployment -n XXX
@@ -262,7 +263,7 @@ kubectl delete deployment xxx(NAME) -n XXX
 
 ## 补充
 
-### kubectl-debug 
+### kubectl-debug
 
 > kubectl-debug 是一个简单的开源的kubectl 插件, 可以帮助我们便捷地进行 Kubernetes 上的 Pod 排障诊断，背后做的事情很简单: 
 >

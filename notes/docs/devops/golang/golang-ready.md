@@ -271,3 +271,40 @@ go build [-o 输出名] [-i] [编译标记] [包名]
 
 构建遵守某些约定(`'go help gopath'`),但不是所有的项目都遵循这些约定，当使用自己的惯例或使用单独的软件构建系统时可以选择使用较低级别的调用`go tool compile`和`go tool link`来避免一些构建工具的开销和设计决策
 
+
+
+
+
+## 配置 vs code
+
+
+
+安装扩展 (`Ctrl/Cmd + Shift + X`) ，搜索 `go` 并安装。
+
+
+
+`Ctrl/Cmd + Shift + P` 运行 `Go: Install/Update Tools` 命令，安装列出的所有的go的扩展插件。
+
+
+
+### 快捷键
+
+`F12`
+
+`Alt+F12`
+
+`Shift+F12`
+
+`Shift+Alt+H`
+
+`Ctrl+Shift+P`
+
+`Ctrl+Shift+O`
+
+`Ctrl+T`
+
+`Shift+Alt+F`: 格式化代码
+
+
+
+[Go more help](https://code.visualstudio.com/docs/languages/go)
