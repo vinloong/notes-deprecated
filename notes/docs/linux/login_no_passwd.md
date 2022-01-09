@@ -36,7 +36,8 @@ service ssh restart
 
 ``` bash
 # 生成密钥对
-ssh-keygen -t rsa -P ""
+# ssh-keygen -t rsa -P ""
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 # 输出到authorized_keys文件
 cat .ssh/id_rsa.pub >> .ssh/authorized_keys
 # 设置authorized_keys权限
