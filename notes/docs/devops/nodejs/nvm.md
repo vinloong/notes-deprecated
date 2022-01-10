@@ -49,3 +49,15 @@ npm_mirror: https://npm.taobao.org/mirrors/npm/
  npm config set registry https://registry.npmjs.org
 ```
 
+
+
+
+
+npm 使用淘宝镜像
+
+```shell
+npm config set registry https://registry.npm.taobao.org
+```
+
+
+
