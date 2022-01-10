@@ -36,7 +36,7 @@
 
 ## 关闭杀软
 
-注册表
+运行`gpedit.msc`  ，打开组策略编辑器
 
 计算机配置 –> 管理模板 –> windows 组件 –> Microsoft Defender 防病毒
 

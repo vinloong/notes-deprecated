@@ -52,4 +52,3 @@ push 时选中 自动加载 Putty 密钥
 
 ![](https://raw.githubusercontent.com/literaryloong/imgchr/master/img/20200928165415.png)
 
-
