@@ -1,18 +1,8 @@
-
-
 # edge cloud
-
-
-
-
-
-
 
 # edge core
 
-
 ```shell
-
 # 下载 kubeedge
 $ wget https://github.com/kubeedge/kubeedge/releases/download/v1.7.1/kubeedge-v1.7.1-linux-arm.tar.gz
 
@@ -24,7 +14,6 @@ $ mv kubeedge-v1.7.1-linux-arm/edge/edgecore /usr/local/bin
 $ mkdir -p /etc/kubeedge/config
 
 $ edgecore --defaultconfig > /etc/kubeedge/config/edgecore.yaml
-
 ```
 
 ```yaml
@@ -137,11 +126,9 @@ modules:
     remoteQueryTimeout: 90
   serviceBus:
     enable: false
-
 ```
 
 主要 修改容器运行时、cgroup 驱动
-
 
 运行 
 
@@ -149,13 +136,12 @@ modules:
 edgecore
 ```
 
-
 如下错误：
 
 > edgecore[45472]: E0407 06:52:35.569727   45472 edged.go:742] Failed to start container manager, err: system validation failed - Following Cgroup subsystem not mounted: [memory]
 > edgecore[45472]: E0407 06:52:35.569777   45472 edged.go:293] initialize module error: system validation failed - Following Cgroup subsystem not mounted: [memory]
-```shell
 
+```shell
 # 内存资源的cgroups机制没有开启
 
 # 修改启动参数
@@ -167,16 +153,8 @@ cgroup_memory=1 cgroup_enable=memory
 
 # 查看可用的cgroup
 $ cat /proc/cgroups
-
-
 ```
-
-
 
 ```bash
-
 scp k8s-master:/etc/cni/net.d/* /etc/cni/net.d/
 ```
-
-
-

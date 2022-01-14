@@ -1,5 +1,3 @@
-
-
 ```
 # 必要
 k8s.gcr.io/kube-apiserver:v1.18.20
@@ -54,4 +52,3 @@ quay.io/prometheus/node-exporter:v0.18.1
 quay.io/coreos/k8s-prometheus-adapter-amd64:v0.5.0
 quay.io/coreos/prometheus-operator:v0.34.0
 ```
-

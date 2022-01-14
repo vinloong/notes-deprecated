@@ -1,7 +1,9 @@
 # Install Docker
 
 ## Install
+
 ubuntu 16.04
+
 ```bash
 # 卸载旧版本：
 sudo apt-get remove docker docker-engine docker.io
@@ -25,7 +27,7 @@ software-properties-common
 # 安装源
 
 # 国内源
-curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key	add -
+curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key    add -
 sudo add-apt-repository \
 "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu \
 $(lsb_release -cs) \
@@ -34,7 +36,7 @@ stable"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
 "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-$(lsb_release	-cs) \
+$(lsb_release    -cs) \
 stable"
 
 # 安装docker-ce
@@ -73,10 +75,10 @@ sudo systemctl restart docker
 ## 编辑/etc/default/docker文件, DOCKER_OPTS追加  --registry-mirror=https://1f3mevbc.mirror.aliyuncs.com
 sudo service docker restart
 ## end
-
 ```
 
 ## 容器命令行工具
+
 ```bash
 # docker 
 sudo docker exec -it 775c7c9ee1e1 /bin/bash
@@ -90,6 +92,7 @@ sudo nsenter --target $tpid --mount --uts --ipc --net --pid
 ```
 
 ## 开启 docker 远程TCP访问
+
 ```bash
 # 
 # 编辑 /etc/systemd/system/multi-user.target.wants/docker.service 文件
@@ -108,7 +111,6 @@ sudo systemctl restart docker
 
 # 2. 编辑  /etc/systemd/system/multi-user.target.wants/docker.service 文件
 # 找到  ExecStart= 追加 --insecure-registry 10.8.30.163:5005
-
 ```
 
 ## install docker in WSL
@@ -120,8 +122,6 @@ sudo systemctl restart docker
 - 在 WSL ubuntu 中按照上面的步骤安装 docker, 执行命令 `docker --version` 
 
 - 执行 `echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc && source ~/.bashrc`
-
-
 
 # 实践
 
@@ -148,10 +148,9 @@ sudo docker run \
 # 共享主机 /var/run/docker.sock 后，jenkins 执行docker 会提示没有权限
 # 进入Jenkins 容器 
 chown 1000:1000 /var/run/docker.sock
-
 ```
 
-##  mysql
+## mysql
 
 ```bash
 # 挂载配置文件和数据目录到宿主机
@@ -178,8 +177,6 @@ redis:alpine
 redis-server /etc/redis/redis.conf --appendonly yes
 ```
 
-
-
 ## ES
 
 ```bash
@@ -193,10 +190,6 @@ docker run -d \
 elasticsearch:6.5.0 
 ```
 
-
-
-
-
 # 创建私有镜像仓库
 
 ```bash
@@ -204,8 +197,6 @@ docker run -d -p 5005:5000 -v /my_registry:/var/lib/registry --restart=always --
 
 docker run -it -p 8088:8080 --restart=always --name registry-web --link registry-srv -e REGISTRY_URL=http://10.8.30.163:5005/v2 -e REGISTRY_NAME=10.8.30.163:5005 hyper/docker-registry-web
 ```
-
-
 
 # 获取镜像加速地址
 
@@ -218,8 +209,3 @@ docker run -it -p 8088:8080 --restart=always --name registry-web --link registry
 [^_^]:#(![](https://raw.githubusercontent.com/literaryloong/imgchr/master/notes/img/001.png))
 
   ![](http://imgchr.lingwenlong.com/notes/img/001.png)
-
-  
-  
-
-

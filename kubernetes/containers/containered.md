@@ -8,33 +8,9 @@ tags: [k8s,containerd]
 
 <div align='center' ><b><font size='70'>containerd 入门</font></b></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <center> author: Uncle Dragon </center>
 
-
 <center>   date: 2021-06-16 </center>
-
 
 <div STYLE="page-break-after: always;"></div>
 
@@ -63,12 +39,12 @@ EOF
 
 # 应用 sysctl 参数而无需重新启动
 $ sudo sysctl --system
-
 ```
 
-
 ## 安装 containerd
+
 ### 1. 从官方Docker仓库安装
+
 参考 [docker的安装](https://docs.docker.com/engine/install/ubuntu/)
 你没看错 就是 `docker` 的安装文档，我们只安装 `containerd.io` 就好
 
@@ -92,13 +68,11 @@ $ echo \
 $ sudo apt-get update
 
 $ sudo apt-get install containerd.io
-
 ```
 
 ### 2. 下载 containerd 二进制文件，手动安装
 
 ```shell
-
 # 下载链接
 $ wget https://github.com/containerd/containerd/releases/download/v1.5.4/cri-containerd-cni-1.5.4-linux-amd64.tar.gz
 
@@ -110,13 +84,11 @@ $ mkdir /etc/containerd
 
 # 在创建的目录中生成配置文件
 $ containerd config default> /etc/containerd/config.toml
-
 ```
 
 配置 `containerd` 服务
 
 ```shell
-
 $ sudo cat <<EOF | sudo tee /lib/systemd/system/containerd.service
 > [Unit]
 > Description=containerd container runtime
@@ -143,19 +115,16 @@ $ sudo cat <<EOF | sudo tee /lib/systemd/system/containerd.service
 > [Install]
 > WantedBy=multi-user.target
 > EOF
-
 ```
 
 配置服务开机自启
 
 ```shell
-
 $ systemctl enable containerd 
 
 $ systemctl start containerd 
 
 $ systemctl status containerd
-
 ```
 
 ## 配置
@@ -204,10 +173,7 @@ Server:
   Version:  1.4.6
   Revision: d71fcd7d8303cbf684402823e425e9dd2e99285d
   UUID: 2ba390eb-5ebf-49ae-a931-fa3ec68bb8aa
-
 ```
-
-
 
 ## 使用
 
@@ -235,6 +201,7 @@ Server:
 ```
 
 输出帮助信息
+
 ```shell
 # ctr --help
 NAME:
@@ -255,7 +222,7 @@ VERSION:
    1.4.6
 
 DESCRIPTION:
-   
+
 ctr is an unsupported debug and administrative client for interacting
 with the containerd daemon. Because it is unsupported, the commands,
 options, and operations are not guaranteed to be backward compatible or
@@ -287,7 +254,6 @@ GLOBAL OPTIONS:
    --namespace value, -n value  namespace to use with commands (default: "default") [$CONTAINERD_NAMESPACE]
    --help, -h                   show help
    --version, -v                print the version
-
 ```
 
 拉取镜像
@@ -307,9 +273,10 @@ layer-sha256:a4a46f2fd7e06fab84b4e78eb2d1b6d007351017f9b18dbeeef1a9e7cf194e00:  
 elapsed: 17.3s                                                                    total:  36.9 M (2.1 MiB/s)                                       
 unpacking linux/amd64 sha256:7e2c6181ad5c425443b56c7c73a9cd6df24a122345847d1ea9bb86a5afc76325...
 done
-
 ```
+
 查看镜像文件列表
+
 ```
 # ctr images list
 REF                                              TYPE                                                      DIGEST                                                                  SIZE     PLATFORMS                                                                                               LABELS 
@@ -348,13 +315,11 @@ CONTAINER    IMAGE                             RUNTIME
 my-redis     docker.io/library/redis:latest    io.containerd.runc.v2
 ```
 
-
-
 **ctr 没有 stop 容器的功能，只能暂停或者杀死容器**
 
 ### `crictl`
 
-### 安装 
+### 安装
 
 - 使用 wget
 
@@ -383,9 +348,7 @@ $ sudo cat <<EOF | sudo tee /etc/crictl.yaml
 > timeout: 10
 > debug: false
 > EOF
-
 ```
-
 
 ### 使用
 
@@ -393,15 +356,15 @@ $ sudo cat <<EOF | sudo tee /etc/crictl.yaml
 
 下面是docker 和 containerd 的cli 工具使用常用命令对比
 
-| id   | docker | ctr  | crictl | 备注 |
-| ---- | ------ | ---- | ------ | ------ |
-| 1    | docker images | ctr images ls | crictl images | 查看本地镜像 |
-| 2   | docker pull | ctr images pull | crictl pull | 拉取镜像 |
-| 3  | docker run | ctr container run | - | 运行容器 |
-| 4 | docker ps | ctr task ls | crictl ps | 查看运行的人容器 |
-| 5 | docker rm | ctr container del | crictl rm | 移除容器 |
-| 6 | docker exec | ctr task exec | crictl exec | 进入容器 |
-| 7 | docker logs |  | crictl logs | 查看容器日志 |
+| id  | docker        | ctr               | crictl        | 备注       |
+| --- | ------------- | ----------------- | ------------- | -------- |
+| 1   | docker images | ctr images ls     | crictl images | 查看本地镜像   |
+| 2   | docker pull   | ctr images pull   | crictl pull   | 拉取镜像     |
+| 3   | docker run    | ctr container run | -             | 运行容器     |
+| 4   | docker ps     | ctr task ls       | crictl ps     | 查看运行的人容器 |
+| 5   | docker rm     | ctr container del | crictl rm     | 移除容器     |
+| 6   | docker exec   | ctr task exec     | crictl exec   | 进入容器     |
+| 7   | docker logs   |                   | crictl logs   | 查看容器日志   |
 
 ### `nerdctl`
 
@@ -433,8 +396,6 @@ tar Cxzvvf /usr/local nerdctl-full-0.8.3-linux-amd64.tar.gz
 
 但是如果把`nerdctl` 简单的看作是 `docker` cli 的复制就大错特错了，他还实现了docker 不具备的功能，例如延迟拉取镜像（[lazy-pulling](https://github.com/containerd/nerdctl/blob/master/docs/stargz.md)）、镜像加密（[imgcrypt](https://github.com/containerd/imgcrypt)）等
 
-
-
 ```shell
 # nerdctl ps
 CONTAINER ID    IMAGE                             COMMAND                   CREATED        STATUS    PORTS    NAMES
@@ -449,6 +410,4 @@ repository.anxinyun.cn/base-images/alpine    latest    cc77c137c4e3    3 days ag
 
 # nerdctl exec -it my-redis sh
 # 
-
 ```
-

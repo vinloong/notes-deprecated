@@ -1,5 +1,3 @@
-
-
 ```dockerfile
 FROM alpine:latest
 
@@ -23,7 +21,4 @@ RUN sed -i "s@https://dl-cdn.alpinelinux.org/@https://repo.huaweicloud.com/@g" /
     && echo "Asia/Shanghai" > /etc/timezone \
     && apk del tzdata \
     && rm ${ALPINE_GLIBC_PKG_NAME} ${ALPINE_GLIBC_PKG_BIN_NAME} ${ALPINE_GLIBC_PKG_I18N_NAME} 
-    
-
 ```
-
