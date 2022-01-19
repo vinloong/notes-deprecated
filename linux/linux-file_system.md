@@ -18,11 +18,11 @@ linux 下常见的文件类型有：普通文件、目录、字符设备文件�
 
 
 
- ![](http://resources.lingwenlong.com/note-img/20210728164909.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191054744.png)
 
 
 
- ![](http://resources.lingwenlong.com/note-img/20210803142025.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191054237.png)
 
 
 

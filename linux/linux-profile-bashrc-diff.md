@@ -129,7 +129,7 @@ echo -e "\033[32m---------- {filename} . end ---------- \033[0m"
 
 ### 开机执行的顺序
 
- ![](http://resources.lingwenlong.com/note-img/20210728160633.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191054874.png)
 
 
 > 开机登录该用户读取顺序：
@@ -169,20 +169,20 @@ $ source .bashrc
 
 #### 不带参数
 
- ![](http://resources.lingwenlong.com/note-img/20210728153700.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191055125.png)
 
 
 > `/etc/bash.bashrc` -> `~/.bashrc` 
 
 #### 带`-l`参数 
 
- ![](http://resources.lingwenlong.com/note-img/20210728154135.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191055332.png)
 
 > `/etc/profile` -> `/etc/bash.bashrc` -> `~/.profile` -> `~/.bashrc` 
 
 ### 执行shell 脚本
 
-  ![](http://resources.lingwenlong.com/note-img/20210728160050.png)
+  ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191055524.png)
 
 > ./test.sh 和 bash test.sh 不会读取上述文件
 >

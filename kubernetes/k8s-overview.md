@@ -55,7 +55,7 @@ Kubernetes 是一个可移植的、可扩展的开源平台，用于管理容器
 
 
 
- ![](http://resources.lingwenlong.com/note-img/20210729150224.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191038367.png)
 
 
 
@@ -185,7 +185,7 @@ Kubernetes：
 
 这张图表展示了包含所有相互关联组件的 Kubernetes 集群
 
- ![](http://resources.lingwenlong.com/note-img/20210802142221.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191039443.png)
 
 
 

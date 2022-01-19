@@ -17,7 +17,7 @@
 
 pivotal 是云原生应用的提出者，可以说是云原生的先驱或探路者。
 
- ![](http://resources.lingwenlong.com/note-img/20210831102943.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191024844.png)
 
 
 
@@ -25,7 +25,7 @@ pivotal 是云原生应用的提出者，可以说是云原生的先驱或探路
 
 #### CNCF 的定义
 
- ![image-20210831143955982](http://resources.lingwenlong.com/note-img/20210831143956.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191025996.png)
 
 
 

@@ -96,7 +96,7 @@ spec:
 
 
 
- ![](http://resources.lingwenlong.com/note-img/20210802143311.png)
+  ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191028741.png)
 
 
 
@@ -175,7 +175,7 @@ spec:
 
 
 
- ![](http://resources.lingwenlong.com/note-img/20210802143420.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191029810.png)
 
 jenkins-service.yaml
 
@@ -204,11 +204,11 @@ spec:
 
 
 
- ![](http://resources.lingwenlong.com/note-img/20210802143500.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191029303.png)
 
 
 
- ![](http://resources.lingwenlong.com/note-img/20210802143639.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191030495.png)
 
  
 
@@ -224,23 +224,23 @@ spec:
 
 系统管理 -> 系统配置 -> Cloud -> 添加一个云
 
-![image-20210804153606423](http://resources.lingwenlong.com/note-img/20210804153606.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191031640.png)
 
 
 
 
 
-![image-20210804153249523](http://resources.lingwenlong.com/note-img/20210804153249.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191032573.png)
 
 
 
-![image-20210804153325353](http://resources.lingwenlong.com/note-img/20210804153325.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191032395.png)
 
 
 
 挂载 docker 
 
-![image-20210804153407679](http://resources.lingwenlong.com/note-img/20210804153407.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191032758.png)
 
 
 

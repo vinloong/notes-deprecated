@@ -12,7 +12,7 @@ echo -e "\033[41;36m something here \033[0m"
 ```
 > 其中41的位置代表底色, 36的位置是代表字的颜色, 效果如下图：
 
- ![](http://resources.lingwenlong.com/note-img/20211110164257.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191055532.png)
 
 
 ## 颜色

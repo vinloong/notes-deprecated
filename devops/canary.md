@@ -6,7 +6,7 @@
 假定线上版本为A, 需要发布的版本为B，通常是新版本。
 灰度发布可以让一定百分比的用户(比如10%)优先体验版本B，其余用户仍然使用版本A，并且慢慢扩大百分比，最终将所用用户迁移到版本B。
 
-![](http://resources.lingwenlong.com/note-img/20210602102231.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191023493.png)
 
 
 # 为什么需要灰度发布
@@ -35,7 +35,9 @@
 
 # 灰度策略
 ## 按流量比例
-![](http://resources.lingwenlong.com/note-img/20210604152148.png)
+
+
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191021433.png)
 
 基于流量就是设置流量权重，实现上最简单，但是流量不稳定，会使用户使用有割裂感。
 
@@ -157,7 +159,7 @@ spec:
 
 ### 3. 访问`Production` 接口
 
- ![](http://resources.lingwenlong.com/note-img/20210604155718.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191024380.png)
 
 ### 4. 下面部署 `Canary` 版本
 yaml 文件 参考上面的版本，在 `gated-demo` 加上 `-canary`
@@ -213,7 +215,7 @@ spec:
               serviceName: gated-demo-canary
               servicePort: 15002
 ```
-![](http://resources.lingwenlong.com/note-img/20210604160900.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191025017.png)
 当 header 'version' 设置 为 '2' 时，所有请求被转到 Canary 版本
 
 # 总结

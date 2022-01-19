@@ -6,6 +6,5 @@ categories:
 tags: [五笔]
 ---
 
-![](https://raw.githubusercontent.com/literaryloong/imgchr/master/notes/img/040.jpg)
+![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/040.jpg)
 
-![](http://imgchr.lingwenlong.com/notes/img/040.jpg)

@@ -25,13 +25,13 @@ volumes:
 ```
 
 部署成功：
-![](http://resources.lingwenlong.com/note-img/20210609140531.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191033085.png)
 
 # 体验
 在服务端新增项目：
-![](http://resources.lingwenlong.com/note-img/20210609141402.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191034303.png)
 
-![](http://resources.lingwenlong.com/note-img/20210609141707.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191034295.png)
 
 这个项目是一个maven 构建的项目，项目是scala 的，
 
@@ -50,7 +50,7 @@ mvn sonar:sonar \
 安装 [sonarscanner](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/)
 
 执行后，代码扫描完成，
-![](http://resources.lingwenlong.com/note-img/20210609143305.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191034312.png)
 
 可以看到总览。
 
@@ -58,33 +58,33 @@ mvn sonar:sonar \
 Jenkins 安装 插件 `SonarQube Scanner for Jenkins`
 
 在 Jenkins 添加 凭据：
-![](http://resources.lingwenlong.com/note-img/20210609143839.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191034960.png)
 
 
 在 系统管理 ---> 系统配置中 ---> `SonarQube servers`
-![](http://resources.lingwenlong.com/note-img/20210609144051.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191035875.png)
 
 在项目构建配置中添加
-![](http://resources.lingwenlong.com/note-img/20210609144231.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191035205.png)
 
-![](http://resources.lingwenlong.com/note-img/20210609144309.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191035162.png)
 
 构建成功完成后：
-![](http://resources.lingwenlong.com/note-img/20210609144522.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191035170.png)
 
 点击上图框的图标，就可以看到 静态扫描的总览了
-![](http://resources.lingwenlong.com/note-img/20210609144655.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191036782.png)
 
 
 # 代码规则
 `sonarQube` 支持自定义代码规则
 下面以 go 语言配置为例：
-![](http://resources.lingwenlong.com/note-img/20210609145338.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191036662.png)
 
 内置的规则不能直接修改，复制内置的规则模板：
-![](http://resources.lingwenlong.com/note-img/20210609145408.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191036667.png)
 
-![](http://resources.lingwenlong.com/note-img/20210609145525.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191036865.png)
 
 可以选择 启用和禁用相关规则：
-![](http://resources.lingwenlong.com/note-img/20210609145822.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191037091.png)

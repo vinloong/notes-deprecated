@@ -30,7 +30,7 @@ ssh -p 22 test@test-n1
 
 ## 密钥登录
 
- ![](http://resources.lingwenlong.com/note-img/20210609165527.png)
+ ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191056364.png)
 > 信息提示大意是密钥文件的权限太过开放了
 > 修改下权限只能自己访问就可以了
 
