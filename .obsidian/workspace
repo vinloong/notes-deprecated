@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "linux/static_ip.md",
-            "mode": "preview"
+            "file": "linux/command-cat.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -76,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/static_ip.md",
+                "file": "linux/command-cat.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,28 +105,36 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/static_ip.md"
+                "file": "linux/command-cat.md"
               }
             }
+          },
+          {
+            "id": "3e844dcdb48a6287",
+            "type": "leaf",
+            "state": {
+              "type": "side-panel-control-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 323
   },
   "active": "1aa6158607f61765",
   "lastOpenFiles": [
-    "linux/static_ip.md",
-    "k8s&container/kubernetes/kubebuilder/kubebuilder-quick-start.md",
-    "k8s&container/kubernetes/k8s_etcd.md",
-    "k8s&container/kubernetes/kubebuilder.md",
-    "k8s&container/kubernetes/kubectl-cm-cmds.md",
-    "k8s&container/kubernetes/kubectl.md",
+    "linux/command-cat.md",
+    "linux/kafka-install.md.md",
     "templates/head-01.md",
-    "k8s&container/未命名.md",
-    "k8s&container/microk8s.md",
-    "k8s&container/k8s-install.md"
+    "devops/vs_community-install-offline.md",
+    "devops/nginx-faq.md",
+    "devops/matplotlib-start.md",
+    "devops/Jenkins-faq.md",
+    "devops/choco.md",
+    "devops/canary.md",
+    "linux/change-passwd.md"
   ]
 }

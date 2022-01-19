@@ -17,5 +17,7 @@
   "alwaysUpdateLinks": true,
   "foldHeading": true,
   "newFileLocation": "current",
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "legacyEditor": false,
+  "livePreview": true
 }
