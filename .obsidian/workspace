@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "linux/command-cat.md",
-            "mode": "source",
+            "file": "kubernetes/microk8s.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/command-cat.md",
+                "file": "kubernetes/microk8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,12 +105,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/command-cat.md"
+                "file": "kubernetes/microk8s.md"
               }
             }
           },
           {
-            "id": "3e844dcdb48a6287",
+            "id": "ca2bc40c3de9d3d7",
             "type": "leaf",
             "state": {
               "type": "side-panel-control-view",
@@ -118,23 +118,24 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 323
+    "width": 294,
+    "collapsed": true
   },
   "active": "1aa6158607f61765",
   "lastOpenFiles": [
-    "linux/command-cat.md",
-    "linux/kafka-install.md.md",
-    "templates/head-01.md",
-    "devops/vs_community-install-offline.md",
-    "devops/nginx-faq.md",
-    "devops/matplotlib-start.md",
-    "devops/Jenkins-faq.md",
-    "devops/choco.md",
-    "devops/canary.md",
-    "linux/change-passwd.md"
+    "kubernetes/microk8s.md",
+    "kubernetes/k8s-install.md",
+    "kubernetes/containers/docker-containerd-K8S.md",
+    "kubernetes/containers/containered.md",
+    "kubernetes/sexy-tips.md",
+    "devops/devops-tools.md.md",
+    "devops/nfs.md",
+    "linux/command-grep.md",
+    "linux/command-firewall.md",
+    "linux/command-chmod.md"
   ]
 }

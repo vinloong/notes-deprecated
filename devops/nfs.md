@@ -130,7 +130,8 @@ To                         Action      From
 
 ```shell
 # 在 Ubuntu/Debian 上安装 `nfs-common`
-$ sudo apt update sudo apt install nfs-common
+$ sudo apt update 
+$ sudo apt install nfs-common
 
 # 在 centos 上安装 `nfs-utils`
 $ sudo yum install nfs-utils
