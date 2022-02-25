@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "kubernetes/microk8s.md",
+            "file": "kubernetes/sexy-tips.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kubernetes/microk8s.md",
+                "file": "kubernetes/sexy-tips.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kubernetes/microk8s.md"
+                "file": "kubernetes/sexy-tips.md"
               }
             }
           },
@@ -127,11 +127,11 @@
   },
   "active": "1aa6158607f61765",
   "lastOpenFiles": [
+    "kubernetes/sexy-tips.md",
     "kubernetes/microk8s.md",
     "kubernetes/k8s-install.md",
     "kubernetes/containers/docker-containerd-K8S.md",
     "kubernetes/containers/containered.md",
-    "kubernetes/sexy-tips.md",
     "devops/devops-tools.md.md",
     "devops/nfs.md",
     "linux/command-grep.md",
