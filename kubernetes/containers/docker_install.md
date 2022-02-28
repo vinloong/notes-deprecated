@@ -206,4 +206,4 @@ docker run -it -p 8088:8080 --restart=always --name registry-web --link registry
 
 - 侧边栏 *镜像中心* --> *镜像加速器*  
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/001.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/001.png)

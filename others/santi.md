@@ -1,2 +1,2 @@
 
-![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191056944.png)
+![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191056944.png)

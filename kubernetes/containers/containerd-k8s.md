@@ -52,28 +52,28 @@ docker公司不满足 Docker 项目的定位，围绕着 docker 在各个层次�
 `containerd`为了支持多种`OCI Runtime`实现，内部使用`containerd-shim`，`shim`英文翻译过来是"垫片"的意思，见名知义了，例如为了支持`runc`，就提供了`containerd-shim-runc`。
 
 经过上面的发展，docker启动一个容器的过程大致是下图所示的流程:
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191047391.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191047391.png)
 从上图可以看出，每启动一个容器，实际上是`containerd`启动了一个`containerd-shim-runc`进程，即使`containerd`的挂掉也不会影响到已经启动的容器。
 
 # `Kubernetes`、`Docker`、`Containerd` 和`CRI`
 
 上面的故事也看出来了 `kubernetes`的出现是为了解决容器编排的问题，在早期为了支持多个容器引擎，是在Kubernetes内部对多个容器引擎做兼容，例如kubelet启动一个`docker-manager`的进程直接调用`docker`的 api 进行容器的创建
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191047835.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191047835.png)
 
 后来 k8s 为了隔离各个容器引擎之间的差异，在 `docker` 分离出 `containerd` 之后，k8s 也搞了一个自己的容器运行时接口，就是 `CRI` 的出现是为了统一 k8s 与不同容器引擎之间交互的接口，与 OCI 的容器运行时规范不同，CRI 更加适合k8s,。后面 k8s 开始把 containerd 接入 CRI 标准。
 
 开始是 kubelet 通过 CRI 接口调用 `docker-shim` 进一步调用 docker 的API ，此时k8s 节点上kubelet 启动容器的过程大概如下图所示：
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191047694.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191047694.png)
 
 前面说了 Docker 项目越来越重，把许多周边的功能都集成到 docker Engine 中, 对于k8s 只是需要一个容器运行时，所以为了更好的将 containerd 接入到 CRI 标准中，k8s 又搞出一个 `cri-containerd` 的项目，`cri-containerd` 是一个守护进程用来实现`kubelet` 和 `containerd` 之间的交互，此时 k8s 节点 上 kubelet 启动容器的大概过程如下图：
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191048233.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191048233.png)
 
 上面`cri-containerd` 和 `containerd` 还是独立的两个进程。他们之间通过 `gRPC` 通信，为了进一步减少了调用链，提高运行效率，后来在 `containerd` V1.1 时，将`cri-containerd` 改成了 `containerd` 的 `CRI` 插件，这让 k8s 启动 容器的过程更加高效，此时k8s 节点上kubelet 启动容器的流程大概如下：
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191048569.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191048569.png)
 
 
 
@@ -87,7 +87,7 @@ k8s 抛弃 `docker-shim` 后，我们可以选择的容器运行时有`container
 
 k8s 调用链示意图：
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191048915.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191048915.png)
 
 
 

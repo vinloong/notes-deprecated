@@ -56,19 +56,19 @@ tags: []
 
 ## kube edge 
 
- <img src="https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191026580.png" style="zoom:80%;" />
+ <img src="https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191026580.png" style="zoom:80%;" />
 
 
 
 ## Baetyl
 
- <img src="https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191027896.png" style="zoom:80%;" />
+ <img src="https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191027896.png" style="zoom:80%;" />
 
 
 
 ## SuperEdge
 
- <img src="https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191027539.png" style="zoom:80%;" />
+ <img src="https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191027539.png" style="zoom:80%;" />
 
 
 
@@ -76,4 +76,4 @@ tags: []
 
 
 
- <img src="https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191028449.png" style="zoom: 67%;" />
+ <img src="https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191028449.png" style="zoom: 67%;" />

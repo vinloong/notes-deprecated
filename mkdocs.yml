@@ -1,7 +1,7 @@
 site_name: dragon's notes
 strict: true
 repo_name: "dragon/notes"
-repo_url: "https://github.com/wayloong/notes"
+repo_url: "https://github.com/vinloong/notes"
 markdown_extensions:
   - admonition
   - codehilite

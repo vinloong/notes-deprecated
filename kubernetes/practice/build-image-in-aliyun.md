@@ -47,13 +47,13 @@ tags: [container]
 
 
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191050069.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191050069.png)
 
 
 
 进入后可以看到使用情况
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191050197.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191050197.png)
 
 
 
@@ -61,13 +61,13 @@ tags: [container]
 
 
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191050373.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191050373.png)
 
 创建镜像仓库：
 
 
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191050881.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191050881.png)
 
 
 
@@ -77,37 +77,37 @@ tags: [container]
 
 
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191051542.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191051542.png)
 
 
 
 选择代码仓库，我这里是 google_containers[^1],这个仓库里写了一些Dockerfile ,下面构建设置选择海外机器构建，
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191051064.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191051064.png)
 
 下面点创建镜像仓库，成功后选择构建，我们设置下构建：
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191052643.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191052643.png)
 
 
 
 设置下Dockerfile 目录，
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191052725.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191052725.png)
 
 
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191052805.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191052805.png)
 
 
 
 点`立即构建`
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191052487.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191052487.png)
 
 构建成功后：
 
- ![](https://cdn.jsdelivr.net/gh/wayloong/imgchr@latest/notes/img/202201191053170.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191053170.png)
 
 
 
