@@ -230,3 +230,13 @@ Hudi核心特性：
 总结：
 
 ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281516783.png)
+
+
+
+
+
+Delta 与 Spark 牢牢绑定
+
+Iceberg 基础扎实，扩展灵活方便
+
+Hudi 基础设计不够扎实，但是功能较完善
