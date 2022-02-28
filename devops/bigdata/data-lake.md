@@ -111,7 +111,7 @@ Hudi核心特性：
 <tr>
 <td>Streaming Read</td>
 <td>✔</td>
-<td>Ongoing</td>
+<td>✔</td>
 <td>✔</td>
 </tr>
 <tr>
@@ -173,7 +173,7 @@ Hudi核心特性：
 <tr>
 <td>MergeOnRead</td>
 <td>❌</td>
-<td>On-going</td>
+<td>On-going ?</td>
 <td>✔</td>
 </tr>
 <tr>
@@ -208,6 +208,7 @@ Hudi核心特性：
 <td>✔</td>
 </tr>
 </table>
+
 
 > ::
 > `group` 修饰符只能在比较和数学运算符中使用。在逻辑运算 `and`，`unless` 和 `or` 操作中默认与右向量中的所有元素进行匹配。
