@@ -25,7 +25,7 @@ jobs:
         run: pwd
         
       - name: Build
-        run: hugo new site quickstart && mv quickstart/* . && git clone -b 3.0.4 https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn && ls
+        run: hugo new site quickstart && mv quickstart/* . && git clone -b 3.0.4 https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn && ls -al
         
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
