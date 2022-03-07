@@ -21,12 +21,18 @@ jobs:
         with:
           hugo-version: 0.91.2
           extended: true
-      - name: pwd
-        run: pwd
+      - name: tar-notes
+        run: tar czvf notes.tar.gz about/ algorithms/ devops/ kubernetes/ linux/ others/ && rm -rf .github .obsidian
         
-      - name: Build
-        run: hugo new site quickstart && mv quickstart/* . && git clone -b 3.0.4 https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn && ls -al
-        
+      - name: Build-init 
+        run: hugo new site wiki && cd wiki/ && git clone -b 3.0.4 https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn
+
+      - name: pre-config
+        run: tar zxvf ../notes.tar.gz content/ && mv ../_config/config.toml . && mv ../_config/theme.toml themes/hugo-theme-relearn/
+  
+      - name: build
+        run: hugo --minify
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         # if: ${{ github.ref == 'refs/heads/master' }}
