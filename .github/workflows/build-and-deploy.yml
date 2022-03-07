@@ -31,7 +31,7 @@ jobs:
         run: tar zxvf notes.tar.gz -C wiki/content/ && mv _config/config.toml wiki/ && mv _config/theme.toml wiki/themes/hugo-theme-relearn/
   
       - name: build
-        run: cd wiki && hugo --minify
+        run: cd wiki && hugo 
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
