@@ -21,15 +21,18 @@ jobs:
         with:
           hugo-version: 0.91.2
           extended: true
-      - name: ls_dir
-        run: ls
+      - name: pwd
+        run: pwd
         
       - name: Build
-        run: hugo new site quickstart && mv quickstart/* . && ls
+        run: hugo new site quickstart && \
+             mv quickstart/* . && \
+             git clone -b 3.0.4 https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn && \
+             ls
         
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
         with:
-          github_token: ${{ secrets.NOTES_ACTIONS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
