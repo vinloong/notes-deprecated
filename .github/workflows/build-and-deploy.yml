@@ -21,9 +21,11 @@ jobs:
         with:
           hugo-version: 0.91.2
           extended: true
-          
+      - name: ls_dir
+        run: ls
+        
       - name: Build
-        run: hugo version
+        run: hugo new site quickstart && ls
         
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
