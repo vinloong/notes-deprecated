@@ -28,14 +28,14 @@ jobs:
         run: hugo new site wiki && cd wiki/ && git clone -b 3.0.4 https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn
 
       - name: pre-config
-        run: tar zxvf ../notes.tar.gz content/ && mv ../_config/config.toml . && mv ../_config/theme.toml themes/hugo-theme-relearn/
+        run: tar zxvf notes.tar.gz wiki/content/ && mv _config/config.toml wiki/ && mv _config/theme.toml wiki/themes/hugo-theme-relearn/
   
       - name: build
-        run: hugo --minify
+        run: cd wiki && hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         # if: ${{ github.ref == 'refs/heads/master' }}
         with:
           deploy_key: ${{ secrets.NOTES_DEPLOY_KEY }}
-          publish_dir: ./public
+          publish_dir: ./wiki/public
