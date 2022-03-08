@@ -25,10 +25,10 @@ jobs:
         run: tar czvf notes.tar.gz about/ algorithms/ devops/ kubernetes/ linux/ others/ && rm -rf .github .obsidian
         
       - name: Build-init 
-        run: hugo new site wiki && cd wiki/themes &&  curl -L https://github.com/McShelby/hugo-theme-relearn/archive/main.zip | unzip -d hugo-theme-relearn
+        run: hugo new site wiki && cd wiki/ && git clone https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn
 
       - name: pre-config
-        run: tar zxvf notes.tar.gz -C wiki/content/ && mv _config/config.toml wiki/
+        run: mv _config/config.toml wiki/
   
       - name: build
         run: cd wiki && hugo 
