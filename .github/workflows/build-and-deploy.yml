@@ -19,7 +19,7 @@ jobs:
       - name: Hugo setup
         uses: peaceiris/actions-hugo@v2.5.0
         with:
-          hugo-version: v0.83.1
+          hugo-version: '0.83.1'
           extended: true
       - name: tar-notes
         run: tar czvf notes.tar.gz about/ algorithms/ devops/ kubernetes/ linux/ others/ && rm -rf .github .obsidian
