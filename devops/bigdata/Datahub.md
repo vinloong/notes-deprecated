@@ -87,7 +87,9 @@ https://github.com/amundsen-io/amundsen :star:3k
 
 Amundsen 是一个数据发现和元数据引擎，用于提高数据分析师、数据科学家和工程师在与数据交互时的工作效率。
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281601478.png)
+ ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr/notes/img/202202281601478.png)
+
+
 
 Amundsen的架构：
 
