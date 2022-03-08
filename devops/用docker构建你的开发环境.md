@@ -1,5 +1,5 @@
-
 # 启用WSL
+
 # 在windows 商店安装 ubuntu 20.04
 # 在vs code 中安装 `Remote - WSL`
  ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191002205.png)
