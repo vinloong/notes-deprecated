@@ -19,16 +19,16 @@ jobs:
       - name: Hugo setup
         uses: peaceiris/actions-hugo@v2.4.13
         with:
-          hugo-version: 0.91.2
+          hugo-version: v0.83.1
           extended: true
       - name: tar-notes
         run: tar czvf notes.tar.gz about/ algorithms/ devops/ kubernetes/ linux/ others/ && rm -rf .github .obsidian
         
       - name: Build-init 
-        run: hugo new site wiki && cd wiki/ && git clone -b 3.0.4 https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn
+        run: hugo new site wiki && cd wiki/ && git clone https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn
 
       - name: pre-config
-        run: tar zxvf notes.tar.gz -C wiki/content/ && mv _config/config.toml wiki/ && mv _config/theme.toml wiki/themes/hugo-theme-relearn/
+        run: tar zxvf notes.tar.gz -C wiki/content/ && mv _config/config.toml wiki/
   
       - name: build
         run: cd wiki && hugo 
