@@ -21,14 +21,14 @@ jobs:
         with:
           hugo-version: '0.83.1'
           extended: true
-      - name: tar-notes
-        run: tar czvf notes.tar.gz about/ algorithms/ devops/ kubernetes/ linux/ others/ && rm -rf .github .obsidian
+#      - name: tar-notes
+#        run: tar czvf notes.tar.gz about/ algorithms/ devops/ kubernetes/ linux/ others/ && rm -rf .github .obsidian
         
       - name: Build-init 
-        run: hugo new site wiki && cd wiki/ && git clone https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn
+        run: hugo new site wiki && cd wiki/ && git clone https://github.com/vinloong/hugo-theme-relearn.git themes/hugo-theme-relearn
 
       - name: pre-config
-        run: mv _config/config.toml wiki/
+        run: mv _config/config.toml wiki/ && mv README.md wiki/content/_index.md
   
       - name: build
         run: cd wiki && hugo 
