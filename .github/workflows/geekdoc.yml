@@ -1,0 +1,47 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0    
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v2.5.0
+        with:
+          hugo-version: 'latest'
+          extended: true
+      
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: pre-wiki 
+        run: hugo new site wiki && cd wiki/ && mkdir -p themes/hugo-geekdoc/ && curl -L https://github.com/thegeeklab/hugo-geekdoc/releases/latest/download/hugo-geekdoc.tar.gz | tar -xz -C themes/hugo-geekdoc/ --strip-components=1
+
+      - name: pre-config
+        run: git clone https://github.com/thegeeklab/hugo-geekdoc.git hugo-geekdoc
+  
+      - name: config
+        run: mv hugo-geekdoc/exampleSite/* wiki/
+
+      - name: build
+        run: cd wiki && hugo 
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        # if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          deploy_key: ${{ secrets.NOTES_DEPLOY_KEY }}
+          publish_dir: ./wiki/public
