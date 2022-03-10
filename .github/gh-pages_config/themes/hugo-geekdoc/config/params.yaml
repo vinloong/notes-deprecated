@@ -20,3 +20,5 @@ geekdocPrivacyPolicy: https://thegeeklab.de/legal-notice/#privacy-policy
 
 geekdocImageLazyLoading: true
 geekdocDarkModeDim: true
+
+geekdocCollapseAllSections: true
