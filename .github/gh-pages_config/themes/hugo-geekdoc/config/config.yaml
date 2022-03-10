@@ -37,3 +37,6 @@ outputs:
     - HTML
   term:
     - HTML
+    
+params:
+  geekdocCollapseAllSections: true
