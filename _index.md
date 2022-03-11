@@ -1,5 +1,5 @@
 ---
-title: Welcome to my documentation
+title: Welcome to loong's wiki
 geekdocNav: false
 geekdocAlign: center
 geekdocAnchor: false
@@ -10,21 +10,21 @@ geekdocAnchor: false
 > 闲看庭前花开花落，漫随天外云卷云舒
 
 <!-- markdownlint-capture -->
+
 <!-- markdownlint-disable MD033 -->
 
 <span class="badge-placeholder">[![Build Status](https://img.shields.io/drone/build/thegeeklab/hugo-geekdoc?logo=drone&server=https%3A%2F%2Fdrone.thegeeklab.de)](https://github.com/vinloong/vinloong.github.io)</span>
 
 <!-- markdownlint-restore -->
 
-
 ## About
 
-### 👨 Hey! i'm <span class="badge-placeholder">[loong](https://blog.lingwenlong.com).</span>
-
+### 👨 Hey! i'm <span class="badge-placeholder">[loong](https://wiki.lingwenlong.com).</span>
 
 🎏 下面是平时用到的一些知识点整理
 
-{{< button size="large" relref="usage/getting-started/" >}}Getting Started{{< /button >}}
+{{< button size="large" relref="toc/" >}}Getting Started{{< /button >}}
+
 
 {{< columns >}}
 
@@ -60,4 +60,3 @@ geekdocAnchor: false
  ![Harbor](https://img.shields.io/badge/Harbor-lightgrey?logo=Harbor)
 
 {{< /columns >}}
-
