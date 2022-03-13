@@ -40,7 +40,7 @@ jobs:
         run: mv _includes/ algorithms/ devops/ kubernetes/ linux/ others/ posts/ toc/ _index.md -t wiki/content/en
         
       - name: build
-        run: cd wiki && npm run build 
+        run: cd wiki &&  npm install && npm run build 
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
