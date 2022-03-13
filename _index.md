@@ -23,7 +23,6 @@ geekdocAnchor: false
 
 🎏 下面是平时用到的一些知识点整理
 
-<!-- {{< button size="large" relref="toc/" >}}Getting Started{{< /button >}} -->
 
 
 {{< columns >}}
