@@ -34,10 +34,10 @@ jobs:
 #         run: mv .github/gh-pages_config/themes/hugo-geekdoc/config/* wiki/ && mv .github/gh-pages_config/themes/hugo-geekdoc/i18n/* wiki/themes/hugo-geekdoc/i18n/ && rm wiki/config.toml
 
       - name: new-site
-        run: git clone https://github.com/h-enk/doks-child-theme.git wiki && rm -rf wiki/content/en/* wiki/content/nl 
+        run: git clone https://github.com/h-enk/doks-child-theme.git wiki && rm -rf wiki/content/en/docs/* wiki/content/nl 
 
       - name: tar-notes
-        run: mv  algorithms/ devops/ kubernetes/ linux/ others/ _index.md -t wiki/content/en
+        run: mv  algorithms/ devops/ kubernetes/ linux/ others/ _index.md -t wiki/content/en/docs/
         
       - name: build
         run: cd wiki &&  npm install && npm run build 
