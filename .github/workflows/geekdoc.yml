@@ -27,17 +27,20 @@ jobs:
         with:
           node-version: '16'
       
-      - name: pre-wiki 
-        run: hugo new site wiki && cd wiki/ && mkdir -p themes/hugo-geekdoc/ && curl -L https://github.com/thegeeklab/hugo-geekdoc/releases/latest/download/hugo-geekdoc.tar.gz | tar -xz -C themes/hugo-geekdoc/ --strip-components=1
+#       - name: pre-wiki 
+#         run: hugo new site wiki && cd wiki/ && mkdir -p themes/hugo-geekdoc/ && curl -L https://github.com/thegeeklab/hugo-geekdoc/releases/latest/download/hugo-geekdoc.tar.gz | tar -xz -C themes/hugo-geekdoc/ --strip-components=1
 
-      - name: config
-        run: mv .github/gh-pages_config/themes/hugo-geekdoc/config/* wiki/ && mv .github/gh-pages_config/themes/hugo-geekdoc/i18n/* wiki/themes/hugo-geekdoc/i18n/ && rm wiki/config.toml
-      
+#       - name: config
+#         run: mv .github/gh-pages_config/themes/hugo-geekdoc/config/* wiki/ && mv .github/gh-pages_config/themes/hugo-geekdoc/i18n/* wiki/themes/hugo-geekdoc/i18n/ && rm wiki/config.toml
+
+      - name: new-site
+        run: git clone https://github.com/h-enk/doks-child-theme.git wiki && rm -rf wiki/content/en/* wiki/content/nl 
+
       - name: tar-notes
-        run: mv _includes/ algorithms/ devops/ kubernetes/ linux/ others/ posts/ toc/ _index.md -t wiki/content/
+        run: mv _includes/ algorithms/ devops/ kubernetes/ linux/ others/ posts/ toc/ _index.md -t wiki/content/en
         
       - name: build
-        run: cd wiki && hugo 
+        run: cd wiki && npm run build 
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
