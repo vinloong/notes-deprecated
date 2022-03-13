@@ -37,7 +37,7 @@ jobs:
         run: git clone https://github.com/h-enk/doks-child-theme.git wiki && rm -rf wiki/content/en/* wiki/content/nl 
 
       - name: tar-notes
-        run: mv _includes/ algorithms/ devops/ kubernetes/ linux/ others/ posts/ toc/ _index.md -t wiki/content/en
+        run: mv  algorithms/ devops/ kubernetes/ linux/ others/ _index.md -t wiki/content/en
         
       - name: build
         run: cd wiki &&  npm install && npm run build 
