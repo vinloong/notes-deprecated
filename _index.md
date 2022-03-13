@@ -25,7 +25,7 @@ geekdocAnchor: false
 
 
 
-{{< columns >}}
+
 
 ### ⚡ Languages I use
 
@@ -35,7 +35,7 @@ geekdocAnchor: false
  ![](https://img.shields.io/badge/CSharp-lightgrey?logo=Csharp) 
  ![](https://img.shields.io/badge/Go-lightgrey?logo=go)
 
-<--->
+
 
 ### 🚀 Some of the technologies I have worked with
 
@@ -58,4 +58,4 @@ geekdocAnchor: false
  ![Ingress](https://img.shields.io/badge/Ingress-lightgrey?logo=Ingress) 
  ![Harbor](https://img.shields.io/badge/Harbor-lightgrey?logo=Harbor)
 
-{{< /columns >}}
+
