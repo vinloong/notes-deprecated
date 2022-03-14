@@ -14,10 +14,10 @@ tags: [docker,wsl]
 
 <!--
 整段整段的不可见内容
-![](http://island.lingwenlong.com/notes/img/20200909141750.png)
+`http://island.lingwenlong.com/notes/img/20200909141750.png`
 
 
-![](http://island.lingwenlong.com/notes/img/20200909142232.png)
+`http://island.lingwenlong.com/notes/img/20200909142232.png`
 
 -->
 
