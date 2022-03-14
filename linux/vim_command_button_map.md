@@ -6,4 +6,4 @@ categories:
 tags: [vim]
 ---
 
-![](http://island.lingwenlong.com/notes/img/20200909140747.jpg)
+![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191058873.png)
