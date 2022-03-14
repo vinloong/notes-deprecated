@@ -12,12 +12,14 @@ tags: [docker,wsl]
 >
 > 设置 > 更新和安全 > OS 内部版本信息
 
+<!--
+整段整段的不可见内容
 ![](http://island.lingwenlong.com/notes/img/20200909141750.png)
 
-<!--more-->
 
 ![](http://island.lingwenlong.com/notes/img/20200909142232.png)
 
+-->
 
 如果你的版本号低于这个，推荐更新安装Windows 10 2020 年 5 月更新，[更新助手](https://download.microsoft.com/download/8/3/c/83c39dca-2d27-4c24-b98b-0a4d6d921c80/Windows10Upgrade9252.exe)。
 
