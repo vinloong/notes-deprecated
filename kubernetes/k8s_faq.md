@@ -247,7 +247,34 @@ github.com/coredns/coredns/plugin/kubernetes/controller.go:322: Failed to list *
 > systemctl start docker
 ```
 
+> Initial timeout of 40s passed.
+> [kubelet-check] It seems like the kubelet isn't running or healthy.
+> [kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10248/healthz' failed with error: Get "http://localhost:10248/healthz": dial tcp 127.0.0.1:10248: connect: connection refused.
+> [kubelet-check] It seems like the kubelet isn't running or healthy.
+>
+> Unfortunately, an error has occurred:
+> 	timed out waiting for the condition
+>
+> This error is likely caused by:
+> 	- The kubelet is not running
+> 	- The kubelet is unhealthy due to a misconfiguration of the node in some way (required cgroups disabled)
 
+最后发现节点上缺少 `/etc/systemd/system/kubelet.service.d/10-kubeadm.conf `这个文件，补上就好了
+
+```shell
+$ vi /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 
+# Note: This dropin only works with kubeadm and kubelet v1.11+
+[Service]
+Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf"
+Environment="KUBELET_CONFIG_ARGS=--config=/var/lib/kubelet/config.yaml"
+# This is a file that "kubeadm init" and "kubeadm join" generates at runtime, populating the KUBELET_KUBEADM_ARGS variable dynamically
+EnvironmentFile=-/var/lib/kubelet/kubeadm-flags.env
+# This is a file that the user can use for overrides of the kubelet args as a last resort. Preferably, the user should use
+# the .NodeRegistration.KubeletExtraArgs object in the configuration files instead. KUBELET_EXTRA_ARGS should be sourced from this file.
+EnvironmentFile=-/etc/default/kubelet
+ExecStart=
+ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS
+```
 
 ### `deployment.yaml`丢失怎么删除pod
 
