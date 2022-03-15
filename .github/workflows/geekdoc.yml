@@ -37,7 +37,7 @@ jobs:
         run: git clone https://github.com/vinloong/doks-child-theme.git wiki
 
       - name: tar-notes
-        run: mv toc/ algorithms/ linux/ others/ -t wiki/content/zh/docs/
+        run: mv algorithms/ linux/ others/ -t wiki/content/zh/docs/
         
       - name: build
         run: cd wiki &&  npm install && npm run build 
