@@ -115,6 +115,8 @@ metadata:
   labels:
     app: test
 spec:
+  matchLabels:
+    app: test
   replicas: 1
   template:
     metadata:
