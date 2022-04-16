@@ -1,50 +1,8 @@
 name: GitHub Pages
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
+on: [push]
+
 
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-20.04
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
-          fetch-depth: 0    
-      - name: Hugo setup
-        uses: peaceiris/actions-hugo@v2.5.0
-        with:
-          hugo-version: 'latest'
-          extended: true
-      
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      
-#       - name: pre-wiki 
-#         run: hugo new site wiki && cd wiki/ && mkdir -p themes/hugo-geekdoc/ && curl -L https://github.com/thegeeklab/hugo-geekdoc/releases/latest/download/hugo-geekdoc.tar.gz | tar -xz -C themes/hugo-geekdoc/ --strip-components=1
-
-#       - name: config
-#         run: mv .github/gh-pages_config/themes/hugo-geekdoc/config/* wiki/ && mv .github/gh-pages_config/themes/hugo-geekdoc/i18n/* wiki/themes/hugo-geekdoc/i18n/ && rm wiki/config.toml
-
-      - name: new-site
-        run: git clone https://github.com/vinloong/doks-child-theme.git wiki
-
-      - name: tar-notes
-        run: mv algorithms/ linux/ others/ -t wiki/content/zh/docs/
-        
-      - name: build
-        run: cd wiki &&  npm install && npm run build 
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        # if: ${{ github.ref == 'refs/heads/master' }}
-        with:
-          deploy_key: ${{ secrets.NOTES_DEPLOY_KEY }}
-          publish_dir: ./wiki/public
+  call-workflow-in-another-repo:
+    uses: vinloong/vinloong.github.io/.github/workflows/build-deploy.yml@main
