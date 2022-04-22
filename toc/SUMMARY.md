@@ -1,4 +1,9 @@
+---
+sidebar_position: 1
+---
+
 # Linux
+
 ## 文件权限管理
 
 ## 进程管理

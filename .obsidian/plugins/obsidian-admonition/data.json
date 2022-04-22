@@ -1,6 +1,6 @@
 {
   "userAdmonitions": {},
-  "syntaxHighlight": false,
+  "syntaxHighlight": true,
   "copyButton": false,
   "version": "6.9.6",
   "autoCollapse": false,

@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "kubernetes/sexy-tips.md",
+            "file": "linux/login_no_passwd.md",
             "mode": "preview",
+            "backlinks": false,
             "source": false
           }
         }
@@ -61,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252,
-    "collapsed": true
+    "width": 291
   },
   "right": {
     "id": "41d3fde056411c40",
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kubernetes/sexy-tips.md",
+                "file": "linux/login_no_passwd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kubernetes/sexy-tips.md"
+                "file": "linux/login_no_passwd.md"
               }
             }
           },
@@ -117,26 +117,37 @@
               "type": "side-panel-control-view",
               "state": {}
             }
+          },
+          {
+            "id": "b1aac67d0ded7dfd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "linux/login_no_passwd.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 294,
-    "collapsed": true
+    "width": 294
   },
   "active": "1aa6158607f61765",
   "lastOpenFiles": [
-    "kubernetes/sexy-tips.md",
-    "kubernetes/microk8s.md",
-    "kubernetes/k8s-install.md",
-    "kubernetes/containers/docker-containerd-K8S.md",
+    "linux/login_no_passwd.md",
+    "kubernetes/containers/image-slim.md",
+    "kubernetes/k8s-kubeconfig.md",
     "kubernetes/containers/containered.md",
-    "devops/devops-tools.md.md",
-    "devops/nfs.md",
-    "linux/command-grep.md",
-    "linux/command-firewall.md",
-    "linux/command-chmod.md"
+    "kubernetes/k8s-docker-2-containerd.md",
+    "kubernetes/containers/containerd-k8s.md",
+    "kubernetes/containers/docker-containerd-K8S.md",
+    "kubernetes/containers/docker-install.md",
+    "kubernetes/microk8s.md",
+    "kubernetes/k8s-install.md"
   ]
 }
