@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "linux/login_no_passwd.md",
+            "file": "devops/web.md",
             "mode": "preview",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/login_no_passwd.md",
+                "file": "devops/web.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/login_no_passwd.md"
+                "file": "devops/web.md"
               }
             }
           },
@@ -124,14 +124,22 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux/login_no_passwd.md",
+                "file": "devops/web.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "a252527c7922317b",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -139,15 +147,15 @@
   },
   "active": "1aa6158607f61765",
   "lastOpenFiles": [
+    "devops/web.md",
+    "devops/nginx-faq.md",
+    "kubernetes/k8s_deploy_public_service.md",
+    "kubernetes/initcontainer.md",
+    "kubernetes/syncimages.md",
     "linux/login_no_passwd.md",
     "kubernetes/containers/image-slim.md",
-    "kubernetes/k8s-kubeconfig.md",
-    "kubernetes/containers/containered.md",
-    "kubernetes/k8s-docker-2-containerd.md",
-    "kubernetes/containers/containerd-k8s.md",
-    "kubernetes/containers/docker-containerd-K8S.md",
-    "kubernetes/containers/docker-install.md",
-    "kubernetes/microk8s.md",
-    "kubernetes/k8s-install.md"
+    "devops/github-repositories.md",
+    "kubernetes/containers/docker-Dockerfile.md",
+    "kubernetes/containers/docker_file.md"
   ]
 }
