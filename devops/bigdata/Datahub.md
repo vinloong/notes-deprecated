@@ -91,7 +91,7 @@ https://github.com/amundsen-io/amundsen :star:3k
 
 Amundsen 是一个数据发现和元数据引擎，用于提高数据分析师、数据科学家和工程师在与数据交互时的工作效率。
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr/notes/img/202202281601478.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281601478.png)
 
 
 
@@ -105,7 +105,7 @@ Amundsen的架构：
 
 DataBuilder: 提供数据摄取库构建元数据。
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281552420.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281552420.png)
 
 Quick Start:
 
@@ -174,7 +174,7 @@ docker run -it -v /home/anxin/amundsen-main:/data python:3.7.12-bullseye /bin/ba
 
 
 
-![image-20220222155316857](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281552964.png)
+![image-20220222155316857](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281552964.png)
 
 ### Databuilder
 
@@ -182,7 +182,7 @@ docker run -it -v /home/anxin/amundsen-main:/data python:3.7.12-bullseye /bin/ba
 
 其中task控制Extractor、Transformer、Loader组件，实现Amundsen的ETL流程。
 
-![image-20220222105956488](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281552586.png)
+![image-20220222105956488](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281552586.png)
 
 #### [Extractor](https://github.com/amundsen-io/amundsen/tree/main/databuilder/databuilder/extractor "Extractor")
 
@@ -285,9 +285,9 @@ Model（模型）是领域代表的抽象
         - amundsennet
 ```
 
-![image-20220221141523439](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281553402.png)
+![image-20220221141523439](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281553402.png)
 
-![image-20220221142216484](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281553103.png)
+![image-20220221142216484](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281553103.png)
 
 
 
@@ -354,7 +354,7 @@ $ python datax.py ./stream2stream.json
 
 任务管理和调度、WEB构建DataX Json、WEB实时日志、运行参数配置等
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281553041.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281553041.png)
 
 [DataX Web部署](https://github.com/WeiYe-Jing/datax-web/blob/master/userGuid.md)
 
@@ -367,7 +367,7 @@ datax_executor 执行器（通过python_path指定datax engine的运行目录）
 + jsonpath  datax json临时文件保存路径
 + pypath datax启动脚本 `xxx/datax/bin/datax.py`
 
-![image-20220223155031469](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281553665.png)
+![image-20220223155031469](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281553665.png)
 
 可以在日志管理中查看任务执行情况和日志输出。
 
@@ -412,7 +412,7 @@ flink-connector-mysql-cdc-2.2-SNAPSHOT.jar
 
 最终client lib下的jar包形态：
 
- ![image-20220224172332791](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281553644.png)
+ ![image-20220224172332791](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281553644.png)
 
 + 修改： flink-sql-connector-elasticsearch7_2.11-1.13.6.jar  --> 
 
@@ -646,7 +646,7 @@ docker run -u $(id -u) -p 8080:8080 -p 8081:8081 --rm -v /mnt/disk1/flink-1.12.2
 
 ### 架构
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281553553.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281553553.png)
 
 上图是 Flink on Zeppelin 的架构。左侧的 Flink 解释器实际上是一个 Flink 客户端，负责编译和管理 Flink 作业生命周期，例如提交、取消作业、监控作业进度等。右侧的 Flink 集群是执行 Flink 作业的地方。它可以是 MiniCluster（本地模式）、Standalone 集群（远程模式）、Yarn 会话集群（yarn 模式）或 Yarn 应用会话集群（yarn-application 模式）
 
@@ -781,7 +781,7 @@ HIVE_CONF_DIR
 
 用于分析，人工智能，机器学习的云原生平台。
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281553230.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281553230.png)
 
 集成的组件：Spark/Presto/Hive/Quantum/Airflow(工作流ETL)
 
@@ -880,13 +880,13 @@ chmod +x airflow.sh
 
 DAG查看界面：
 
-![image-20220210155752796](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281554742.png)
+![image-20220210155752796](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281554742.png)
 
 分别以树形和图
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281554165.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281554165.png)
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281554732.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281554732.png)
 
 ## [大数据处理中的Lambda架构和Kappa架构](https://www.cnblogs.com/xiaodf/p/11642555.html)
 
@@ -906,7 +906,7 @@ DAG查看界面：
 
 Lambda架构：
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281554943.jpg)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281554943.jpg)
 
 Lambda架构(Lambda Architecture),总共由三层系统组成：
 
@@ -916,7 +916,7 @@ Kappa架构：
 
 以kafka为例说明：
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281554564.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281554564.png)
 
 去掉了批处理层，仅保留了速度层。实现流批一体
 
@@ -930,11 +930,11 @@ Kappa架构：
 
 [新一代流式数据湖平台](https://www.infoq.cn/article/08t12zv6ev9spxalpklq)
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281554389.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281554389.png)
 
 **网易严选Iceberg应用实践**
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281554064.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281554064.png)
 
 Datahub-canal: 主要用途是基于 MySQL 数据库增量日志解析，提供增量数据订阅和消费。 
 
@@ -956,11 +956,11 @@ DM（Data Market）数据集市
 
 [博文](https://www.cnblogs.com/emqx/p/11547881.html)中介绍了EMQ X企业版中Schema Registry功能，处理各类编解码协议。
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281556600.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281556600.png)
 
 Schema Registry和Rule Engine在EMQX中的应用：
 
-![img](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281556479.png)
+![img](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281556479.png)
 
 
 

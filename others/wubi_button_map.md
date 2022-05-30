@@ -6,5 +6,5 @@ categories:
 tags: [五笔]
 ---
 
-![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/040.jpg)
+![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/040.jpg)
 

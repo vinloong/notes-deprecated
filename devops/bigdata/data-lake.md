@@ -4,27 +4,27 @@
 
 `delta` 需求：
 
-![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281048122.png)
+![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281048122.png)
 
 delta核心功能特性：
 
-![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281050108.png)
+![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281050108.png)
 
 Hudi核心特性：
 
-![image-20220228105254680](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281524612.png)
+![image-20220228105254680](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281524612.png)
 
 
 
 `Iceberg` 核心诉求:
 
-![image-20220228105455152](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281524757.png)
+![image-20220228105455152](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281524757.png)
 
 
 
 综上，一个**好的数据湖**应该做到的功能点：
 
-![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281055342.png)
+![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281055342.png)
 
 <table border="1">
 <tr>
@@ -230,7 +230,7 @@ Hudi核心特性：
 
 总结：
 
-![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202202281516783.png)
+![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202202281516783.png)
 
 
 

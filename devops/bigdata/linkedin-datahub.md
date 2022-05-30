@@ -1,4 +1,4 @@
- ![image-20220311161712496](https://cdn.jsdelivr.net/gh/vinloong/imgchr/notes/img/202203111617619.png)
+ ![image-20220311161712496](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202203111617619.png)
 
 # 分析脚本
 

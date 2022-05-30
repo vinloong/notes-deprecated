@@ -15,7 +15,7 @@ sudo apt install libpam-google-authenticator
  google-authenticator -t -f -d -w 3 -e 10 -r 3 -R 30 
  ```
 
- ![image-20220301085819471](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202203010858593.png)
+ ![image-20220301085819471](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202203010858593.png)
 
 > 配置参数说明：
 >

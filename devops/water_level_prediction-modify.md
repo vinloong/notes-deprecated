@@ -1,44 +1,44 @@
 
 # 看水位预测代码
 我们拿到行业服务科发来的 python 脚本
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191113437.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191113437.png)
 我们是不能直接用的
 有几个问题
 1. 模型是用测点名区分的并且还使用了大量使用了中文
       为了防止一些编码上的问题或其他一些不必要的问题这里需要修改为使用测点id
-   ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191113703.png)
-   ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191113628.png)
-   ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191113226.png)
+   ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191113703.png)
+   ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191113628.png)
+   ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191113226.png)
 2.  平台api 和 天气接口是写死的，平台api token 也是写死的
      
-    ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191114073.png)
-    ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191114754.png)
+    ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191114073.png)
+    ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191114754.png)
 3.  多处读取配置文件
-    ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191114684.png)
-	![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191114023.png)
-	![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191115621.png)
-	![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191115786.png)
+    ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191114684.png)
+	![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191114023.png)
+	![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191115621.png)
+	![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191115786.png)
 5.  数据存储需要改为 ES
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191115571.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191115571.png)
 
 另外 我们部署环境是k8s ，需要自己编写`Dockerfile` 来构建镜像
 
 # 开始修改代码
 1. 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191115706.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191115706.png)
 把每个模型文件夹命名改为测点id,并修改相关引用代码，
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191117062.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191117062.png)
 
 配置文件和相关代码修改：
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191117839.png)
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191117701.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191117839.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191117701.png)
 10水位测点修改：
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191117416.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191117416.png)
 
 2. 把天气和anxinyun平台 api 改为读取配置
-    ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191118725.png)
+    ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191118725.png)
 3.  配置管理我们单独写一个文件，具备从配置文件和环境变量获取参数
-    ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191118383.png)
+    ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191118383.png)
     在每个使用参数的地方添加引用 `config` ，
 	> 这里说下 `ConfigParser` 这个配置管理用的工具类，会把读取的配置存到对象实例，没必要每次都去读配置文件
 4.  数据存到ES ,会用到 `elasticsearch6`

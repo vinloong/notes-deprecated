@@ -63,7 +63,7 @@ plt.show()
 
 ```
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191006866.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191006866.png)
 
 
 ## 遇到的问题

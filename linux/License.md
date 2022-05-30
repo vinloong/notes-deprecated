@@ -74,7 +74,7 @@
 
 说到这里一个外国大神 整理了一个流程图，对前面我们说的几种许可证做了归纳，效果图如下：
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191053145.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191053145.png)
 
 
 

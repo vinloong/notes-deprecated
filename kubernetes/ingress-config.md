@@ -568,9 +568,9 @@ NAME                       CLASS    HOSTS   ADDRESS   PORTS   AGE
 ingress-demo   public   *                 80      3d6h
 ```
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191037442.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191037442.png)
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191037351.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191037351.png)
 
 
 
@@ -652,7 +652,7 @@ ingress.networking.k8s.io/ingress-demo configured
 
 ### 验证
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191038020.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191038020.png)
 
  ##  定制配置
 

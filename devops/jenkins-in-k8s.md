@@ -96,7 +96,7 @@ spec:
 
 
 
-  ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191028741.png)
+  ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191028741.png)
 
 
 
@@ -175,7 +175,7 @@ spec:
 
 
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191029810.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191029810.png)
 
 jenkins-service.yaml
 
@@ -204,11 +204,11 @@ spec:
 
 
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191029303.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191029303.png)
 
 
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191030495.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191030495.png)
 
  
 
@@ -224,23 +224,23 @@ spec:
 
 系统管理 -> 系统配置 -> Cloud -> 添加一个云
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191031640.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191031640.png)
 
 
 
 
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191032573.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191032573.png)
 
 
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191032395.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191032395.png)
 
 
 
 挂载 docker 
 
- ![](https://cdn.jsdelivr.net/gh/vinloong/imgchr@latest/notes/img/202201191032758.png)
+ ![](https://raw.githubusercontent.com/vinloong/imgchr/main/notes/img/202201191032758.png)
 
 
 
